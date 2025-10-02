@@ -1,0 +1,17 @@
+name: Environment Variables
+
+
+on:
+    workflow_dispatch:
+
+
+jobs:
+    create-variables:
+        runs-on: ubuntu-latest
+
+
+        steps:
+            - name: Access discord token
+              env:
+                DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+              run: python bot_runner.py
