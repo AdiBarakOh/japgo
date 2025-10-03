@@ -9,11 +9,20 @@
         "documentation": {}
     },
     {
-        "label": "TOKEN",
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "DISCORD_TOKEN",
         "kind": 5,
         "importPath": "japgo_bot",
         "description": "japgo_bot",
-        "peekOfCode": "TOKEN = os.getenv(\"DISCORD_TOKEN\")\nprint(\"TOKEN is:\", TOKEN is not None)  # should print True",
+        "peekOfCode": "DISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\")",
         "detail": "japgo_bot",
         "documentation": {}
     }
