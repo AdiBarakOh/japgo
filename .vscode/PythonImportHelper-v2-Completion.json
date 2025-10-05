@@ -18,11 +18,55 @@
         "documentation": {}
     },
     {
+        "label": "alert_homework",
+        "importPath": "on_message_plays",
+        "description": "on_message_plays",
+        "isExtraImport": true,
+        "detail": "on_message_plays",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "intents",
+        "kind": 5,
+        "importPath": "japgo_bot",
+        "description": "japgo_bot",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return\n    await alert_homework(message, client)\nDISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable",
+        "detail": "japgo_bot",
+        "documentation": {}
+    },
+    {
+        "label": "intents.message_content",
+        "kind": 5,
+        "importPath": "japgo_bot",
+        "description": "japgo_bot",
+        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return\n    await alert_homework(message, client)\nDISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable\nclient.run(DISCORD_TOKEN)",
+        "detail": "japgo_bot",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "japgo_bot",
+        "description": "japgo_bot",
+        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return\n    await alert_homework(message, client)\nDISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable\nclient.run(DISCORD_TOKEN)",
+        "detail": "japgo_bot",
+        "documentation": {}
+    },
+    {
         "label": "DISCORD_TOKEN",
         "kind": 5,
         "importPath": "japgo_bot",
         "description": "japgo_bot",
-        "peekOfCode": "DISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\")",
+        "peekOfCode": "DISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable\nclient.run(DISCORD_TOKEN)",
         "detail": "japgo_bot",
         "documentation": {}
     }
