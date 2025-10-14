@@ -133,7 +133,7 @@
         "documentation": {}
     },
     {
-        "label": "delete_from_db",
+        "label": "delete_user_text_in_word_or_grammer",
         "importPath": "data_bases",
         "description": "data_bases",
         "isExtraImport": true,
@@ -173,6 +173,14 @@
         "documentation": {}
     },
     {
+        "label": "Quiz",
+        "importPath": "quizes",
+        "description": "quizes",
+        "isExtraImport": true,
+        "detail": "quizes",
+        "documentation": {}
+    },
+    {
         "label": "asyncio",
         "kind": 6,
         "isExtraImport": true,
@@ -188,6 +196,14 @@
         "importPath": "random",
         "description": "random",
         "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "create_quiz",
+        "importPath": "api_responses",
+        "description": "api_responses",
+        "isExtraImport": true,
+        "detail": "api_responses",
         "documentation": {}
     },
     {
@@ -334,11 +350,11 @@
         "documentation": {}
     },
     {
-        "label": "loger",
+        "label": "logger",
         "kind": 5,
         "importPath": "japgo_bot",
         "description": "japgo_bot",
-        "peekOfCode": "loger = logging.getLogger('main')\nlogging.basicConfig(filename='main_log', encoding='utf-8', level=logging.DEBUG)\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:",
+        "peekOfCode": "logger = logging.getLogger('main')\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )",
         "detail": "japgo_bot",
         "documentation": {}
     },
@@ -347,7 +363,7 @@
         "kind": 5,
         "importPath": "japgo_bot",
         "description": "japgo_bot",
-        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return\n    await alert_homework(message, client)",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()",
         "detail": "japgo_bot",
         "documentation": {}
     },
@@ -356,7 +372,7 @@
         "kind": 5,
         "importPath": "japgo_bot",
         "description": "japgo_bot",
-        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return\n    await alert_homework(message, client)\n    await add_grammer(message, client)",
+        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:",
         "detail": "japgo_bot",
         "documentation": {}
     },
@@ -365,7 +381,7 @@
         "kind": 5,
         "importPath": "japgo_bot",
         "description": "japgo_bot",
-        "peekOfCode": "client = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return\n    await alert_homework(message, client)\n    await add_grammer(message, client)\n    await add_words(message, client)",
+        "peekOfCode": "client = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return",
         "detail": "japgo_bot",
         "documentation": {}
     },
@@ -410,7 +426,7 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def create_random_text(lengh: int):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    random_characters = ''.join([random.choice(characters) for i in range(lengh)])\n    return random_characters\ndef test_adding_word_to_db(word: str) -> bool:\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()",
+        "peekOfCode": "def create_random_text(lengh: int):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    random_characters = ''.join([random.choice(characters) for i in range(lengh)])\n    return random_characters\ndef test_adding_word_to_db() -> bool:\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) ",
         "detail": "test",
         "documentation": {}
     },
@@ -419,7 +435,7 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def test_adding_word_to_db(word: str) -> bool:\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_from_db('word', word)\n    return added_result is not None\ndef test_adding_grammer_to_db(word: str) -> bool:",
+        "peekOfCode": "def test_adding_word_to_db() -> bool:\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('word', word)\n    return added_result is not None",
         "detail": "test",
         "documentation": {}
     },
@@ -428,7 +444,25 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def test_adding_grammer_to_db(word: str) -> bool:\n    add_grammer_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_from_db('grammer', word)\n    return added_result is not None\nprint(test_adding_word_to_db(create_random_text(10)))",
+        "peekOfCode": "def test_adding_grammer_to_db() -> bool:\n    word = \"this is adding_grammer_to_db grammer\"\n    add_grammer_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return added_result is not None",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "test_create_quiz",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def test_create_quiz() -> bool:\n    ai_quiz = create_quiz(1, [\"よる　よります\", \"ことにする　i have decided to do\"])\n    for ai_output in ai_quiz.split(\"\\n\"):\n        if len(ai_output) == 0:\n            return False\n    return True\ndef test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "test_pull_info_for_test",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    print(info_to_test)\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test\nprint(test_adding_word_to_db())",
         "detail": "test",
         "documentation": {}
     }

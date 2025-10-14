@@ -60,7 +60,8 @@ class Quiz:
     def pull_info_for_test(self, dates: list[str]) -> list[str]:
         info_for_test = []
         for day in dates:
-            info_for_test.append(get_info_by_date(day))
+            for info in get_info_by_date(day):
+                info_for_test.append(str(info).strip("""('" ,)"""))
         return info_for_test
     
        
