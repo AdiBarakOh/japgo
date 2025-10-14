@@ -228,7 +228,7 @@
         "kind": 2,
         "importPath": "api_responses",
         "description": "api_responses",
-        "peekOfCode": "def create_quiz(how_many_questions: int, info_to_test: list, more_instructions='') -> str:\n    response = ai_client.responses.create(\n        model=\"gpt-4.1-nano\",\n        # for gpt >= 5: add reasoning={\"effort\": \"low\"},\n        instructions=\"return only questions(no numbering) and answers like: question:, answer:.\",\n        input=(f\"this is what I learned at japanease class: {info_to_test}. \" +\n            f\"create {how_many_questions} questions to help me practice (translate, fill the word, verb formations) and more.\" +\n            more_instructions\n        ),\n        max_output_tokens=1000",
+        "peekOfCode": "def create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]\n    try:",
         "detail": "api_responses",
         "documentation": {}
     },
@@ -237,7 +237,7 @@
         "kind": 5,
         "importPath": "api_responses",
         "description": "api_responses",
-        "peekOfCode": "logger = logging.getLogger('API_AI_REQURSTS')\nopen_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(how_many_questions: int, info_to_test: list, more_instructions='') -> str:\n    response = ai_client.responses.create(\n        model=\"gpt-4.1-nano\",\n        # for gpt >= 5: add reasoning={\"effort\": \"low\"},\n        instructions=\"return only questions(no numbering) and answers like: question:, answer:.\",\n        input=(f\"this is what I learned at japanease class: {info_to_test}. \" +\n            f\"create {how_many_questions} questions to help me practice (translate, fill the word, verb formations) and more.\" +",
+        "peekOfCode": "logger = logging.getLogger('API_AI_REQURSTS')\nopen_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system",
         "detail": "api_responses",
         "documentation": {}
     },
@@ -246,7 +246,7 @@
         "kind": 5,
         "importPath": "api_responses",
         "description": "api_responses",
-        "peekOfCode": "open_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(how_many_questions: int, info_to_test: list, more_instructions='') -> str:\n    response = ai_client.responses.create(\n        model=\"gpt-4.1-nano\",\n        # for gpt >= 5: add reasoning={\"effort\": \"low\"},\n        instructions=\"return only questions(no numbering) and answers like: question:, answer:.\",\n        input=(f\"this is what I learned at japanease class: {info_to_test}. \" +\n            f\"create {how_many_questions} questions to help me practice (translate, fill the word, verb formations) and more.\" +\n            more_instructions",
+        "peekOfCode": "open_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"",
         "detail": "api_responses",
         "documentation": {}
     },
@@ -255,7 +255,7 @@
         "kind": 5,
         "importPath": "api_responses",
         "description": "api_responses",
-        "peekOfCode": "ai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(how_many_questions: int, info_to_test: list, more_instructions='') -> str:\n    response = ai_client.responses.create(\n        model=\"gpt-4.1-nano\",\n        # for gpt >= 5: add reasoning={\"effort\": \"low\"},\n        instructions=\"return only questions(no numbering) and answers like: question:, answer:.\",\n        input=(f\"this is what I learned at japanease class: {info_to_test}. \" +\n            f\"create {how_many_questions} questions to help me practice (translate, fill the word, verb formations) and more.\" +\n            more_instructions\n        ),",
+        "peekOfCode": "ai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]",
         "detail": "api_responses",
         "documentation": {}
     },
@@ -282,7 +282,7 @@
         "kind": 2,
         "importPath": "data_bases",
         "description": "data_bases",
-        "peekOfCode": "def add_grammer_to_db(grammer: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            \"INSERT INTO grammer VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
+        "peekOfCode": "def add_grammer_to_db(grammer: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            \"INSERT INTO grammer (user_text, date_added) VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
         "detail": "data_bases",
         "documentation": {}
     },
@@ -462,7 +462,7 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    print(info_to_test)\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test\nprint(test_adding_word_to_db())",
+        "peekOfCode": "def test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    print(info_to_test)\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test",
         "detail": "test",
         "documentation": {}
     }

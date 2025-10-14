@@ -25,7 +25,7 @@ def add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TAB
         return False
     else:
         cursor.execute(
-        "INSERT INTO word VALUES (?, ?)",
+        "INSERT INTO word (user_text, date_added) VALUES (?, ?)",
         (word, time.strftime('%Y-%m-%d'),)
         )
         connection.commit()
@@ -41,7 +41,7 @@ def add_grammer_to_db(grammer: str) -> None:
         logger.debug("grammer already exists in the database.")
     else:
         cursor.execute(
-            "INSERT INTO grammer VALUES (?, ?)",
+            "INSERT INTO grammer (user_text, date_added) VALUES (?, ?)",
             (grammer, time.strftime('%Y-%m-%d'),)
         )
         connection.commit()

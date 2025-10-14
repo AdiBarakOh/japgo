@@ -54,8 +54,10 @@ def test_pull_info_for_test() -> bool:
     print(info_to_test)
     delete_user_text_in_word_or_grammer('grammer', word)
     return word in info_to_test
+
+
             
-print(test_adding_word_to_db())        
+
 
 
 
