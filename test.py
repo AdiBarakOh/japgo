@@ -3,16 +3,16 @@ import string
 import random
 import time
 
-from api_responses import create_quiz
+from ai_responses import create_quiz
 from data_bases import (
     add_grammer_to_db,
     add_word_to_db,
     create_db,
     delete_user_text_in_word_or_grammer,
-    
 )
 from quizes import Quiz
 
+create_db()
 
 def create_random_text(lengh: int):
     characters = string.ascii_letters + string.digits + string.punctuation
@@ -48,17 +48,15 @@ def test_create_quiz() -> bool:
             return False
     return True
 
-def test_pull_info_for_test() -> bool:
+def test_pull_info_for_quiz() -> bool:
     word = "this is pull_info_for_test word"
     add_grammer_to_db(word)
-    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])
-    print(info_to_test)
+    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])
     delete_user_text_in_word_or_grammer('grammer', word)
     return word in info_to_test
 
 
-create_db()
-           
+    
 
 
 

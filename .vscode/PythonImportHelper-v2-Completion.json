@@ -208,18 +208,18 @@
     },
     {
         "label": "create_quiz",
-        "importPath": "api_responses",
-        "description": "api_responses",
+        "importPath": "ai_responses",
+        "description": "ai_responses",
         "isExtraImport": true,
-        "detail": "api_responses",
+        "detail": "ai_responses",
         "documentation": {}
     },
     {
         "label": "create_quiz",
-        "importPath": "api_responses",
-        "description": "api_responses",
+        "importPath": "ai_responses",
+        "description": "ai_responses",
         "isExtraImport": true,
-        "detail": "api_responses",
+        "detail": "ai_responses",
         "documentation": {}
     },
     {
@@ -234,37 +234,37 @@
     {
         "label": "create_quiz",
         "kind": 2,
-        "importPath": "api_responses",
-        "description": "api_responses",
+        "importPath": "ai_responses",
+        "description": "ai_responses",
         "peekOfCode": "def create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]\n    try:",
-        "detail": "api_responses",
+        "detail": "ai_responses",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "api_responses",
-        "description": "api_responses",
+        "importPath": "ai_responses",
+        "description": "ai_responses",
         "peekOfCode": "logger = logging.getLogger('API_AI_REQURSTS')\nopen_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system",
-        "detail": "api_responses",
+        "detail": "ai_responses",
         "documentation": {}
     },
     {
         "label": "open_ai_token",
         "kind": 5,
-        "importPath": "api_responses",
-        "description": "api_responses",
+        "importPath": "ai_responses",
+        "description": "ai_responses",
         "peekOfCode": "open_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"",
-        "detail": "api_responses",
+        "detail": "ai_responses",
         "documentation": {}
     },
     {
         "label": "ai_client",
         "kind": 5,
-        "importPath": "api_responses",
-        "description": "api_responses",
+        "importPath": "ai_responses",
+        "description": "ai_responses",
         "peekOfCode": "ai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]",
-        "detail": "api_responses",
+        "detail": "ai_responses",
         "documentation": {}
     },
     {
@@ -299,7 +299,7 @@
         "kind": 2,
         "importPath": "data_bases",
         "description": "data_bases",
-        "peekOfCode": "def get_all_info_dates(table: str) -> Optional[list]:\n    if table in (\"word\", \"grammer\"):\n        connection = sqlite3.connect('japgo_db')  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() \n        return all_info\n    logger.error(\"db get_all_info was used without proper table name.\")\n    return  ",
+        "peekOfCode": "def get_all_info_dates(table: str) -> Optional[list]:\n    \"\"\" \n    Return all info learnd in the given dates\n    \"\"\"\n    if table in (\"word\", \"grammer\"):\n        connection = sqlite3.connect('japgo_db')  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() ",
         "detail": "data_bases",
         "documentation": {}
     },
@@ -335,16 +335,16 @@
         "kind": 2,
         "importPath": "data_bases",
         "description": "data_bases",
-        "peekOfCode": "def delete_question(question: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"DELETE FROM questions WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef return_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
+        "peekOfCode": "def delete_question(question: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"DELETE FROM questions WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef pull_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
         "detail": "data_bases",
         "documentation": {}
     },
     {
-        "label": "return_added_today",
+        "label": "pull_added_today",
         "kind": 2,
         "importPath": "data_bases",
         "description": "data_bases",
-        "peekOfCode": "def return_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
+        "peekOfCode": "def pull_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
         "detail": "data_bases",
         "documentation": {}
     },
@@ -461,16 +461,16 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def test_create_quiz() -> bool:\n    ai_quiz = create_quiz(1, [\"よる　よります\", \"ことにする　i have decided to do\"])\n    for ai_output in ai_quiz.split(\"\\n\"):\n        if len(ai_output) == 0:\n            return False\n    return True\ndef test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])",
+        "peekOfCode": "def test_create_quiz() -> bool:\n    ai_quiz = create_quiz(1, [\"よる　よります\", \"ことにする　i have decided to do\"])\n    for ai_output in ai_quiz.split(\"\\n\"):\n        if len(ai_output) == 0:\n            return False\n    return True\ndef test_pull_info_for_quiz() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])",
         "detail": "test",
         "documentation": {}
     },
     {
-        "label": "test_pull_info_for_test",
+        "label": "test_pull_info_for_quiz",
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    print(info_to_test)\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test\ncreate_db()",
+        "peekOfCode": "def test_pull_info_for_quiz() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test",
         "detail": "test",
         "documentation": {}
     }

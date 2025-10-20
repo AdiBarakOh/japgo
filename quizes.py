@@ -4,7 +4,7 @@ import logging
 import random
 from typing import Optional
 
-from api_responses import create_quiz
+from ai_responses import create_quiz
 from data_bases import add_question_to_db, get_info_by_date, get_all_info_dates
 
 logger = logging.getLogger('quizes')
@@ -45,7 +45,10 @@ class Quiz:
         return question_number
     
     
-    def pull_dates_for_test(self) -> Optional[list[str]]:
+    def pull_dates_for_quiz(self) -> Optional[list[str]]:
+        """
+        Returns random dates that information was learned at
+        """
         words = get_all_info_dates('word')
         grammers = get_all_info_dates('grammer')
         all_dates = words + grammers
@@ -57,7 +60,7 @@ class Quiz:
         return None
     
     
-    def pull_info_for_test(self, dates: list[str]) -> list[str]:
+    def pull_info_for_quiz(self, dates: list[str]) -> list[str]:
         info_for_test = []
         for day in dates:
             for info in get_info_by_date(day):
@@ -84,9 +87,9 @@ class Quiz:
     
     
     async def configure_quiz(self, question_number: int) -> None:
-        dates_to_test = self.pull_dates_for_test()
+        dates_to_test = self.pull_dates_for_quiz()
         if dates_to_test:
-            knowledge_for_test = self.pull_info_for_test(dates_to_test)
+            knowledge_for_test = self.pull_info_for_quiz(dates_to_test)
         if knowledge_for_test:
             self.ai_quiz = create_quiz(question_number, knowledge_for_test)
         else:

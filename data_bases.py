@@ -7,6 +7,7 @@ from typing import Optional
 logging.basicConfig(filename='main_log.log', encoding='utf-8', level=logging.DEBUG)
 logger = logging.getLogger('data_base')
 
+
 def create_db() -> None:
     connection = sqlite3.connect('japgo_db')  
     cursor = connection.cursor()
@@ -49,6 +50,9 @@ def add_grammer_to_db(grammer: str) -> None:
     cursor.close()
 
 def get_all_info_dates(table: str) -> Optional[list]:
+    """ 
+    Return all info learnd in the given dates
+    """
     if table in ("word", "grammer"):
         connection = sqlite3.connect('japgo_db')  
         cursor = connection.cursor()
@@ -80,7 +84,6 @@ def add_question_to_db(question_to_add:str) -> None:
     connection.commit()
     cursor.close()
     
-    
 def delete_user_text_in_word_or_grammer(table: str, user_text: str) -> None:
     connection = sqlite3.connect('japgo_db')  
     cursor = connection.cursor()
@@ -96,7 +99,7 @@ def delete_question(question: str) -> None:
     connection.commit()
     cursor.close()
     
-def return_added_today(table: str):
+def pull_added_today(table: str):
     connection = sqlite3.connect('japgo_db')  
     cursor = connection.cursor()
     cursor.execute(f"SELECT * FROM {table} WHERE date_added=?", (time.strftime('%Y-%m-%d'),))
