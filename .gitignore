@@ -208,4 +208,5 @@ __marimo__/
 
 *.sqlite3
   *.db
-japgo_db.file
+japgo_db.*
+japgo_db.File
