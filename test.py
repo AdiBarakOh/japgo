@@ -7,6 +7,7 @@ from api_responses import create_quiz
 from data_bases import (
     add_grammer_to_db,
     add_word_to_db,
+    create_db,
     delete_user_text_in_word_or_grammer,
     
 )
@@ -56,7 +57,8 @@ def test_pull_info_for_test() -> bool:
     return word in info_to_test
 
 
-            
+create_db()
+           
 
 
 

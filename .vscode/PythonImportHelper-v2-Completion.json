@@ -133,6 +133,14 @@
         "documentation": {}
     },
     {
+        "label": "create_db",
+        "importPath": "data_bases",
+        "description": "data_bases",
+        "isExtraImport": true,
+        "detail": "data_bases",
+        "documentation": {}
+    },
+    {
         "label": "delete_user_text_in_word_or_grammer",
         "importPath": "data_bases",
         "description": "data_bases",
@@ -462,7 +470,7 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    print(info_to_test)\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test",
+        "peekOfCode": "def test_pull_info_for_test() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_test(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    print(info_to_test)\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test\ncreate_db()",
         "detail": "test",
         "documentation": {}
     }
