@@ -3,9 +3,9 @@ import os
 
 import discord
 
-from data_bases import create_db
-from on_message_plays import add_grammer, add_words, alert_homework
-from quizes import Quiz
+from data.database import create_db
+from handlers.on_message import add_grammer, add_words, alert_homework
+from services.quiz import Quiz
 
 logging.basicConfig(filename='main_log', encoding='utf-8', level=logging.DEBUG)
 logger = logging.getLogger('main')

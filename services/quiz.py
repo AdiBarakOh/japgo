@@ -4,8 +4,8 @@ import logging
 import random
 from typing import Optional
 
-from ai_responses import create_quiz
-from data_bases import add_question_to_db, get_info_by_date, get_all_info_dates
+from services.ai_responses import create_quiz
+from data.database import add_question_to_db, get_info_by_date, get_all_info_dates
 
 logger = logging.getLogger('quizes')
 
@@ -88,9 +88,10 @@ class Quiz:
     
     async def configure_quiz(self, question_number: int) -> None:
         dates_to_test = self.pull_dates_for_quiz()
+        knowledge_for_test = None
         if dates_to_test:
             knowledge_for_test = self.pull_info_for_quiz(dates_to_test)
-        if knowledge_for_test:
+        if knowledge_for_test is not None:
             self.ai_quiz = create_quiz(question_number, knowledge_for_test)
         else:
             await self.original_message.channel.send(self.NOT_ENOUGH_INPUT)

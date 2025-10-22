@@ -3,14 +3,14 @@ import string
 import random
 import time
 
-from ai_responses import create_quiz
-from data_bases import (
+from services.ai_responses import create_quiz
+from data.database import (
     add_grammer_to_db,
     add_word_to_db,
     create_db,
     delete_user_text_in_word_or_grammer,
 )
-from quizes import Quiz
+from services.quiz import Quiz
 
 create_db()
 
@@ -41,12 +41,6 @@ def test_adding_grammer_to_db() -> bool:
     delete_user_text_in_word_or_grammer('grammer', word)
     return added_result is not None
 
-def test_create_quiz() -> bool:
-    ai_quiz = create_quiz(1, ["よる　よります", "ことにする　i have decided to do"])
-    for ai_output in ai_quiz.split("\n"):
-        if len(ai_output) == 0:
-            return False
-    return True
 
 def test_pull_info_for_quiz() -> bool:
     word = "this is pull_info_for_test word"

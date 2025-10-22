@@ -4,10 +4,10 @@ import logging
 import sqlite3
 
 
-from data_bases import add_grammer_to_db, add_word_to_db
+from data.database import add_grammer_to_db, add_word_to_db
 
 
-logger = logging.getLogger('on_message_plays')
+logger = logging.getLogger('on_message')
 
 async def alert_homework(message: discord.Message, client: discord.Client) -> None:
     REMINDER_SECONDS = 5760

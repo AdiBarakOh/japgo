@@ -1,28 +1,11 @@
 [
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "logging",
         "description": "logging",
         "detail": "logging",
-        "documentation": {}
-    },
-    {
-        "label": "OpenAI",
-        "importPath": "openai",
-        "description": "openai",
-        "isExtraImport": true,
-        "detail": "openai",
         "documentation": {}
     },
     {
@@ -60,6 +43,15 @@
         "documentation": {}
     },
     {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
         "label": "discord",
         "kind": 6,
         "isExtraImport": true,
@@ -69,132 +61,100 @@
         "documentation": {}
     },
     {
-        "label": "create_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
-        "isExtraImport": true,
-        "detail": "data_bases",
-        "documentation": {}
-    },
-    {
         "label": "add_grammer_to_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_word_to_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_question_to_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "get_info_by_date",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "get_all_info_dates",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_grammer_to_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_word_to_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "create_db",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "delete_user_text_in_word_or_grammer",
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
-        "label": "add_grammer",
-        "importPath": "on_message_plays",
-        "description": "on_message_plays",
+        "label": "create_db",
+        "importPath": "data.database",
+        "description": "data.database",
         "isExtraImport": true,
-        "detail": "on_message_plays",
+        "detail": "data.database",
         "documentation": {}
     },
     {
-        "label": "add_words",
-        "importPath": "on_message_plays",
-        "description": "on_message_plays",
-        "isExtraImport": true,
-        "detail": "on_message_plays",
-        "documentation": {}
-    },
-    {
-        "label": "alert_homework",
-        "importPath": "on_message_plays",
-        "description": "on_message_plays",
-        "isExtraImport": true,
-        "detail": "on_message_plays",
-        "documentation": {}
-    },
-    {
-        "label": "Quiz",
-        "importPath": "quizes",
-        "description": "quizes",
-        "isExtraImport": true,
-        "detail": "quizes",
-        "documentation": {}
-    },
-    {
-        "label": "Quiz",
-        "importPath": "quizes",
-        "description": "quizes",
-        "isExtraImport": true,
-        "detail": "quizes",
-        "documentation": {}
-    },
-    {
-        "label": "asyncio",
+        "label": "os",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
         "documentation": {}
     },
     {
@@ -208,18 +168,18 @@
     },
     {
         "label": "create_quiz",
-        "importPath": "ai_responses",
-        "description": "ai_responses",
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
         "isExtraImport": true,
-        "detail": "ai_responses",
+        "detail": "services.ai_responses",
         "documentation": {}
     },
     {
         "label": "create_quiz",
-        "importPath": "ai_responses",
-        "description": "ai_responses",
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
         "isExtraImport": true,
-        "detail": "ai_responses",
+        "detail": "services.ai_responses",
         "documentation": {}
     },
     {
@@ -232,246 +192,277 @@
         "documentation": {}
     },
     {
-        "label": "create_quiz",
-        "kind": 2,
-        "importPath": "ai_responses",
-        "description": "ai_responses",
-        "peekOfCode": "def create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]\n    try:",
-        "detail": "ai_responses",
+        "label": "Quiz",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
+        "isExtraImport": true,
+        "detail": "services.quiz",
         "documentation": {}
     },
     {
-        "label": "logger",
-        "kind": 5,
-        "importPath": "ai_responses",
-        "description": "ai_responses",
-        "peekOfCode": "logger = logging.getLogger('API_AI_REQURSTS')\nopen_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system",
-        "detail": "ai_responses",
+        "label": "Quiz",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
+        "isExtraImport": true,
+        "detail": "services.quiz",
         "documentation": {}
     },
     {
-        "label": "open_ai_token",
-        "kind": 5,
-        "importPath": "ai_responses",
-        "description": "ai_responses",
-        "peekOfCode": "open_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"",
-        "detail": "ai_responses",
+        "label": "add_grammer",
+        "importPath": "handlers.on_message",
+        "description": "handlers.on_message",
+        "isExtraImport": true,
+        "detail": "handlers.on_message",
         "documentation": {}
     },
     {
-        "label": "ai_client",
-        "kind": 5,
-        "importPath": "ai_responses",
-        "description": "ai_responses",
-        "peekOfCode": "ai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]",
-        "detail": "ai_responses",
+        "label": "add_words",
+        "importPath": "handlers.on_message",
+        "description": "handlers.on_message",
+        "isExtraImport": true,
+        "detail": "handlers.on_message",
+        "documentation": {}
+    },
+    {
+        "label": "alert_homework",
+        "importPath": "handlers.on_message",
+        "description": "handlers.on_message",
+        "isExtraImport": true,
+        "detail": "handlers.on_message",
         "documentation": {}
     },
     {
         "label": "create_db",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def create_db() -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS word(user_text TEXT, date_added TEXT)\") \n    cursor.execute(\"CREATE TABLE IF NOT EXISTS grammer(user_text TEXT, date_added TEXT)\")\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS questions(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TABLE_COL\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_word_to_db",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TABLE_COL\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,))\n    if cursor.fetchone():\n        logger.debug(\"word already exists in the database.\")\n        cursor.close()\n        return False\n    else:\n        cursor.execute(",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_grammer_to_db",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def add_grammer_to_db(grammer: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            \"INSERT INTO grammer (user_text, date_added) VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "get_all_info_dates",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def get_all_info_dates(table: str) -> Optional[list]:\n    \"\"\" \n    Return all info learnd in the given dates\n    \"\"\"\n    if table in (\"word\", \"grammer\"):\n        connection = sqlite3.connect('japgo_db')  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() ",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "get_info_by_date",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def get_info_by_date(date_requested: str) -> list:\n    connection = sqlite3.connect('japgo_db')\n    cursor = connection.cursor()\n    cursor.execute(\"SELECT user_text FROM grammer WHERE date_added=?\", (date_requested,))\n    all_grammer = cursor.fetchall()\n    cursor.execute(\"SELECT user_text FROM word WHERE date_added=?\", (date_requested,))\n    all_words = cursor.fetchall()\n    cursor.close()\n    return all_grammer + all_words\ndef add_question_to_db(question_to_add:str) -> None:",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "add_question_to_db",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def add_question_to_db(question_to_add:str) -> None:\n    connection = sqlite3.connect('japgo_db')\n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM questions WHERE question=?\", (question_to_add,))\n    if cursor.fetchone():\n        cursor.close()\n        return\n    cursor.execute(\"INSERT INTO questions VALUES (?,?,?)\", (question_to_add, 0, time.strftime('%Y-%m-%d'),))\n    connection.commit()\n    cursor.close()",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "delete_user_text_in_word_or_grammer",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def delete_user_text_in_word_or_grammer(table: str, user_text: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    if table in ['word', 'grammer']:\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    cursor.close()\ndef delete_question(question: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "delete_question",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def delete_question(question: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"DELETE FROM questions WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef pull_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "pull_added_today",
         "kind": 2,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "def pull_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "data_bases",
-        "description": "data_bases",
+        "importPath": "data.database",
+        "description": "data.database",
         "peekOfCode": "logger = logging.getLogger('data_base')\ndef create_db() -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS word(user_text TEXT, date_added TEXT)\") \n    cursor.execute(\"CREATE TABLE IF NOT EXISTS grammer(user_text TEXT, date_added TEXT)\")\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS questions(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TABLE_COL\n    connection = sqlite3.connect('japgo_db')  ",
-        "detail": "data_bases",
+        "detail": "data.database",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "japgo_bot",
-        "description": "japgo_bot",
-        "peekOfCode": "logger = logging.getLogger('main')\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )",
-        "detail": "japgo_bot",
+        "importPath": "handlers.on_message",
+        "description": "handlers.on_message",
+        "peekOfCode": "logger = logging.getLogger('on_message')\nasync def alert_homework(message: discord.Message, client: discord.Client) -> None:\n    REMINDER_SECONDS = 5760\n    reminder_days = int(REMINDER_SECONDS // (24 * 60))\n    if message.channel.name == \"homework-help\":\n        await message.reply(content=(\n            f\"\"\"Please react 👍 to this message when completed.\n            I will remind you in {reminder_days} days.\"\"\"\n            ))\n        def check_homework(reaction, user):",
+        "detail": "handlers.on_message",
         "documentation": {}
     },
     {
-        "label": "intents",
-        "kind": 5,
-        "importPath": "japgo_bot",
-        "description": "japgo_bot",
-        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()",
-        "detail": "japgo_bot",
-        "documentation": {}
-    },
-    {
-        "label": "intents.message_content",
-        "kind": 5,
-        "importPath": "japgo_bot",
-        "description": "japgo_bot",
-        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:",
-        "detail": "japgo_bot",
-        "documentation": {}
-    },
-    {
-        "label": "client",
-        "kind": 5,
-        "importPath": "japgo_bot",
-        "description": "japgo_bot",
-        "peekOfCode": "client = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return",
-        "detail": "japgo_bot",
-        "documentation": {}
-    },
-    {
-        "label": "DISCORD_TOKEN",
-        "kind": 5,
-        "importPath": "japgo_bot",
-        "description": "japgo_bot",
-        "peekOfCode": "DISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable\nclient.run(DISCORD_TOKEN)",
-        "detail": "japgo_bot",
+        "label": "create_quiz",
+        "kind": 2,
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
+        "peekOfCode": "def create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]\n    try:",
+        "detail": "services.ai_responses",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "on_message_plays",
-        "description": "on_message_plays",
-        "peekOfCode": "logger = logging.getLogger('on_message_plays')\nasync def alert_homework(message: discord.Message, client: discord.Client) -> None:\n    REMINDER_SECONDS = 5760\n    reminder_days = int(REMINDER_SECONDS // (24 * 60))\n    if message.channel.name == \"homework-help\":\n        await message.reply(content=(\n            f\"\"\"Please react 👍 to this message when completed.\n            I will remind you in {reminder_days} days.\"\"\"\n            ))\n        def check_homework(reaction, user):",
-        "detail": "on_message_plays",
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
+        "peekOfCode": "logger = logging.getLogger('API_AI_REQURSTS')\nopen_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system",
+        "detail": "services.ai_responses",
+        "documentation": {}
+    },
+    {
+        "label": "open_ai_token",
+        "kind": 5,
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
+        "peekOfCode": "open_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"",
+        "detail": "services.ai_responses",
+        "documentation": {}
+    },
+    {
+        "label": "ai_client",
+        "kind": 5,
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
+        "peekOfCode": "ai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]",
+        "detail": "services.ai_responses",
         "documentation": {}
     },
     {
         "label": "Quiz",
         "kind": 6,
-        "importPath": "quizes",
-        "description": "quizes",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
         "peekOfCode": "class Quiz:\n    QUIZ_START_MESSAGE = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"\n    )",
-        "detail": "quizes",
+        "detail": "services.quiz",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "quizes",
-        "description": "quizes",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
         "peekOfCode": "logger = logging.getLogger('quizes')\nclass Quiz:\n    QUIZ_START_MESSAGE = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"",
-        "detail": "quizes",
+        "detail": "services.quiz",
         "documentation": {}
     },
     {
         "label": "create_random_text",
         "kind": 2,
-        "importPath": "test",
-        "description": "test",
+        "importPath": "tests.test",
+        "description": "tests.test",
         "peekOfCode": "def create_random_text(lengh: int):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    random_characters = ''.join([random.choice(characters) for i in range(lengh)])\n    return random_characters\ndef test_adding_word_to_db() -> bool:\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) ",
-        "detail": "test",
+        "detail": "tests.test",
         "documentation": {}
     },
     {
         "label": "test_adding_word_to_db",
         "kind": 2,
-        "importPath": "test",
-        "description": "test",
+        "importPath": "tests.test",
+        "description": "tests.test",
         "peekOfCode": "def test_adding_word_to_db() -> bool:\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('word', word)\n    return added_result is not None",
-        "detail": "test",
+        "detail": "tests.test",
         "documentation": {}
     },
     {
         "label": "test_adding_grammer_to_db",
         "kind": 2,
-        "importPath": "test",
-        "description": "test",
+        "importPath": "tests.test",
+        "description": "tests.test",
         "peekOfCode": "def test_adding_grammer_to_db() -> bool:\n    word = \"this is adding_grammer_to_db grammer\"\n    add_grammer_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return added_result is not None",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "test_create_quiz",
-        "kind": 2,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "def test_create_quiz() -> bool:\n    ai_quiz = create_quiz(1, [\"よる　よります\", \"ことにする　i have decided to do\"])\n    for ai_output in ai_quiz.split(\"\\n\"):\n        if len(ai_output) == 0:\n            return False\n    return True\ndef test_pull_info_for_quiz() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])",
-        "detail": "test",
+        "detail": "tests.test",
         "documentation": {}
     },
     {
         "label": "test_pull_info_for_quiz",
         "kind": 2,
-        "importPath": "test",
-        "description": "test",
+        "importPath": "tests.test",
+        "description": "tests.test",
         "peekOfCode": "def test_pull_info_for_quiz() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test",
-        "detail": "test",
+        "detail": "tests.test",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "logger = logging.getLogger('main')\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "intents",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "intents.message_content",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "client = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "DISCORD_TOKEN",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "DISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable\nclient.run(DISCORD_TOKEN)",
+        "detail": "main",
         "documentation": {}
     }
 ]
