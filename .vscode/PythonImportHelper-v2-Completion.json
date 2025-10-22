@@ -175,14 +175,6 @@
         "documentation": {}
     },
     {
-        "label": "create_quiz",
-        "importPath": "services.ai_responses",
-        "description": "services.ai_responses",
-        "isExtraImport": true,
-        "detail": "services.ai_responses",
-        "documentation": {}
-    },
-    {
         "label": "string",
         "kind": 6,
         "isExtraImport": true,
