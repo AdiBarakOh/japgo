@@ -784,3 +784,24 @@ DEBUG:on_message:Japご#6133 sent in quiz: Answer:  I will go to the post office
 DEBUG:on_message:Japご#6133 sent in quiz: Quiz is over. Hope you enjoyed!
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+DEBUG:config:Configuration loaded.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:discord.client:logging in using static token
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: d4b6c901d5ff5a5a437b2ef290927a35).
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+DEBUG:config:Configuration loaded.
+DEBUG:discord.client:on_message has successfully been registered as an event
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+DEBUG:config:Configuration loaded.
+DEBUG:discord.client:on_message has successfully been registered as an event
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:discord.client:logging in using static token
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: af98c4d485b42035917a41017e3b779b).
+DEBUG:on_message:barakorevi sent in quiz: !japgo
+DEBUG:on_message:quiz should start
+DEBUG:on_message:Japご#6133 sent in quiz: Do you want me to create a quiz for you?
+            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.
+            After each question, every message you send WILL count as your answer and will be scored.
+            No backsies!
+            Please answer carefully.

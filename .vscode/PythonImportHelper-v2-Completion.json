@@ -538,6 +538,15 @@
         "documentation": {}
     },
     {
+        "label": "on_message_event",
+        "kind": 2,
+        "importPath": "handlers.on_message",
+        "description": "handlers.on_message",
+        "peekOfCode": "def on_message_event() -> None:            \n    @client.event\n    async def on_message(message):\n        logger.debug(\n            f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n        message.content = message.content.lower()\n        if message.author == client.user or BOT_PREFIX not in message.content:\n            return\n        message.content = message.content.replace(BOT_PREFIX, \"\")",
+        "detail": "handlers.on_message",
+        "documentation": {}
+    },
+    {
         "label": "logger",
         "kind": 5,
         "importPath": "handlers.on_message",
@@ -668,7 +677,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "logger = logging.getLogger('main')\nclient: discord.Client = DISCORD_CLIENT\ncreate_db()\nclient.run(DISCORD_TOKEN)",
+        "peekOfCode": "logger = logging.getLogger('main')\nclient: discord.Client = DISCORD_CLIENT\ncreate_db()\non_message.on_message_event()\nclient.run(DISCORD_TOKEN)",
         "detail": "main",
         "documentation": {}
     }

@@ -65,26 +65,26 @@ async def add_grammer(message: discord.Message, client: discord.Client) -> None:
             logger.info(adding_to_db)
             await message.channel.send(f'{message.content} was regected for some reason.')
 
-            
-@client.event
-async def on_message(message):
-    logger.debug(
-        f"{message.author} sent in {message.channel.name}: {message.content}"
+def on_message_event() -> None:            
+    @client.event
+    async def on_message(message):
+        logger.debug(
+            f"{message.author} sent in {message.channel.name}: {message.content}"
         )
     
-    message.content = message.content.lower()
-    if message.author == client.user or BOT_PREFIX not in message.content:
-        return
+        message.content = message.content.lower()
+        if message.author == client.user or BOT_PREFIX not in message.content:
+            return
     
-    message.content = message.content.replace(BOT_PREFIX, "")
-    await alert_homework(message, client)
-    await add_grammer(message, client)
-    await add_words(message, client)
+        message.content = message.content.replace(BOT_PREFIX, "")
+        await alert_homework(message, client)
+        await add_grammer(message, client)
+        await add_words(message, client)
     
-    if message.channel.name == QUIZ_CHANNEL_NAME:
-        logger.debug("quiz should start")
-        quiz: Quiz = Quiz(message, client)
-        await quiz.main_quiz()  
+        if message.channel.name == QUIZ_CHANNEL_NAME:
+            logger.debug("quiz should start")
+            quiz: Quiz = Quiz(message, client)
+            await quiz.main_quiz()  
         
 
             

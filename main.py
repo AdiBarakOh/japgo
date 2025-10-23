@@ -11,7 +11,7 @@ logger = logging.getLogger('main')
 client: discord.Client = DISCORD_CLIENT
 
 create_db()
-
+on_message.on_message_event()
 
 client.run(DISCORD_TOKEN)
 
