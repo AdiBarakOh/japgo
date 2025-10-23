@@ -4,6 +4,21 @@ import logging
 import random
 from typing import Optional
 
+from config import (
+    ANSWER_SEPARATION,
+    GENERAL_REACTION_SECONDS,
+    GRAMMER_TABLE_NAME,
+    LONG_QUIZ_QUESTIONS,
+    LONG_QUIZ_REACTION,
+    MAX_DATES_TO_QUIZ,
+    MEDIUM_QUIZ_QUESTIONS,
+    MEDIUM_QUIZ_REACTION,
+    QUESTION_SEPERATION,
+    SECONDS_FOR_ANSWER_QUIZ,
+    SHORT_QUIZ_QUESTIONS,
+    SHORT_QUIZ_REACTION,  
+    WORDS_TABLE_NAME,
+)
 from services.ai_responses import create_quiz
 from data.database import add_question_to_db, get_info_by_date, get_all_info_dates
 
@@ -20,11 +35,7 @@ class Quiz:
                     "Not enough data to test, " +
                     "try and add more words and grammer!"
     )
-    SHORT_QUIZ_QUESTIONS = 1
-    MEDIUM_QUIZ_QUESTIONS = 2
-    LONG_QUIZ_QUESTIONS = 3
-    SHORT_QUIZ_REACTION, MEDIUM_QUIZ_REACTION, LONG_QUIZ_REACTION = "👍", "😆", "🙏"
-
+    
 
     def __init__(self, message: discord.Message, client: discord.Client):
         self.original_message = message
@@ -33,27 +44,27 @@ class Quiz:
     
         
     def calc_how_many_questions(self, reaction: str) -> int:
-        if reaction == self.SHORT_QUIZ_REACTION:
-            question_number = self.SHORT_QUIZ_REACTION
-        elif reaction == self.MEDIUM_QUIZ_REACTION:
-            question_number = self.MEDIUM_QUIZ_REACTION
-        elif reaction == self.LONG_QUIZ_REACTION:
-            question_number = self.LONG_QUIZ_REACTION
+        if reaction == SHORT_QUIZ_REACTION:
+            question_number = SHORT_QUIZ_QUESTIONS
+        elif reaction == MEDIUM_QUIZ_REACTION:
+            question_number = MEDIUM_QUIZ_QUESTIONS
+        elif reaction == LONG_QUIZ_REACTION:
+            question_number = LONG_QUIZ_QUESTIONS
         else:
             question_number = 0
-            logger.debug("invalid reaction to start quiz question")
+            logger.debug("Invalid reaction to start quiz question.")
         return question_number
     
     
     def pull_dates_for_quiz(self) -> Optional[list[str]]:
         """
-        Returns random dates that information was learned at
+        Returns random dates on which information was learned
         """
-        words = get_all_info_dates('word')
-        grammers = get_all_info_dates('grammer')
+        words = get_all_info_dates(WORDS_TABLE_NAME)
+        grammers = get_all_info_dates(GRAMMER_TABLE_NAME)
         all_dates = words + grammers
         if len(all_dates) >= 1:
-            dates_to_choose_count = min(len(all_dates), 3)
+            dates_to_choose_count = min(len(all_dates), MAX_DATES_TO_QUIZ)
             random_dates_unclean = random.choices(all_dates, k=dates_to_choose_count)
             random_dates_cleaned = [(str(day)).strip("""('" ,)""") for day in set(random_dates_unclean)]
             return random_dates_cleaned
@@ -69,9 +80,9 @@ class Quiz:
     
        
     def check_reaction_to_message(self, reaction: discord.Reaction, user: discord.User) -> bool:
-        if user == self.original_message.author and str(reaction.emoji) in (
-            self.SHORT_QUIZ_REACTION + self.MEDIUM_QUIZ_REACTION + self.LONG_QUIZ_REACTION
-            ):
+        if user == self.original_message.author and str(reaction.emoji) in [
+            SHORT_QUIZ_REACTION, MEDIUM_QUIZ_REACTION, LONG_QUIZ_REACTION
+            ]:
             return True
         return False
     
@@ -79,9 +90,15 @@ class Quiz:
     async def reaction_to_quiz_start(self) -> Optional[discord.Reaction]:  
         await self.original_message.channel.send(self.QUIZ_START_MESSAGE)
         try:
-            reaction, _ = await self.client.wait_for('reaction_add', timeout=100, check=self.check_reaction_to_message)     
+            reaction, _ = await self.client.wait_for(
+                'reaction_add',
+                timeout=GENERAL_REACTION_SECONDS,
+                check=self.check_reaction_to_message
+            )     
         except asyncio.TimeoutError:
-            await self.original_message.channel.send("Nevermind. maybe another time?")
+            await self.original_message.channel.send(
+                "Nevermind. maybe another time?"
+            )
             return None
         return reaction
     
@@ -98,21 +115,28 @@ class Quiz:
             
       
     async def quiz_the_user(self):
-        for question in self.ai_quiz.split("\n"):
-            if len(question) < 1:
-                return
-            if question.startswith('answer:'):
-                await self.original_message.channel.send(question)
-            else:   
-                add_question_to_db(question)    
-                await self.original_message.channel.send(question)
+        for sentence in self.ai_quiz.split("\n"):
+            if len(sentence) < 1:
+                continue
+            
+            if sentence.startswith(QUESTION_SEPERATION):
+                sentence = sentence.removeprefix(QUESTION_SEPERATION)
+                add_question_to_db(sentence)    
+                await self.original_message.channel.send(sentence)
                 try: 
-                    await self.client.wait_for('message',timeout=600, check=(
+                    await self.client.wait_for(
+                        'message',
+                        timeout=SECONDS_FOR_ANSWER_QUIZ,
+                        check=(
                         lambda answer: answer.author == self.original_message.author
-                    ))
+                        )
+                    )
                 except asyncio.TimeoutError:
                     return
-        self.original_message.channel.send('Quiz is over. Hope you enjoyed!')    
+            else:
+                sentence = sentence.removeprefix(ANSWER_SEPARATION) 
+                await self.original_message.channel.send("Answer: " + sentence)
+        await self.original_message.channel.send('Quiz is over. Hope you enjoyed!')    
             # might add a check and scores to user answers
 
 

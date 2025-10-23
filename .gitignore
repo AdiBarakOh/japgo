@@ -206,8 +206,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# DB
 *.sqlite3
   *.db
-japgo_db.*
-japgo_db.File
 japgo_db
+
+#VS
+.vscode
+
+

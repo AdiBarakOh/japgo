@@ -27,19 +27,251 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "DATA_BASE_PATH",
+        "importPath": "config",
+        "description": "config",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "config",
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "GRAMMER_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "QUESTIONS_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "WORDS_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_PREFIX",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DISCORD_CLIENT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "GRAMMER_CHANNEL_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "HOME_WORK_CHANNEL_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "QUIZ_CHANNEL_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DAYS_HOMEWORK_REMINDER",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "WORDS_CHANNEL_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "AI_INSTRUCTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LONGEST_INPUT_OF_DATA_TO_QUIZ",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_OUTPUT_TOKENS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OPENAI_API_KEY",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OPENAI_MODEL_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ANSWER_SEPARATION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "GENERAL_REACTION_SECONDS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "GRAMMER_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LONG_QUIZ_QUESTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LONG_QUIZ_REACTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_DATES_TO_QUIZ",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIUM_QUIZ_QUESTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIUM_QUIZ_REACTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "QUESTION_SEPERATION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDS_FOR_ANSWER_QUIZ",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SHORT_QUIZ_QUESTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SHORT_QUIZ_REACTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "WORDS_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DISCORD_CLIENT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DISCORD_TOKEN",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
         "documentation": {}
     },
     {
@@ -141,12 +373,19 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
+        "label": "Quiz",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "services.quiz",
+        "documentation": {}
+    },
+    {
+        "label": "Quiz",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
+        "isExtraImport": true,
+        "detail": "services.quiz",
         "documentation": {}
     },
     {
@@ -167,6 +406,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "create_quiz",
         "importPath": "services.ai_responses",
         "description": "services.ai_responses",
@@ -184,43 +431,20 @@
         "documentation": {}
     },
     {
-        "label": "Quiz",
-        "importPath": "services.quiz",
-        "description": "services.quiz",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "services.quiz",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
-        "label": "Quiz",
-        "importPath": "services.quiz",
-        "description": "services.quiz",
+        "label": "on_message",
+        "importPath": "handlers",
+        "description": "handlers",
         "isExtraImport": true,
-        "detail": "services.quiz",
-        "documentation": {}
-    },
-    {
-        "label": "add_grammer",
-        "importPath": "handlers.on_message",
-        "description": "handlers.on_message",
-        "isExtraImport": true,
-        "detail": "handlers.on_message",
-        "documentation": {}
-    },
-    {
-        "label": "add_words",
-        "importPath": "handlers.on_message",
-        "description": "handlers.on_message",
-        "isExtraImport": true,
-        "detail": "handlers.on_message",
-        "documentation": {}
-    },
-    {
-        "label": "alert_homework",
-        "importPath": "handlers.on_message",
-        "description": "handlers.on_message",
-        "isExtraImport": true,
-        "detail": "handlers.on_message",
+        "detail": "handlers",
         "documentation": {}
     },
     {
@@ -228,7 +452,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def create_db() -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS word(user_text TEXT, date_added TEXT)\") \n    cursor.execute(\"CREATE TABLE IF NOT EXISTS grammer(user_text TEXT, date_added TEXT)\")\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS questions(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TABLE_COL\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()",
+        "peekOfCode": "def create_db() -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {WORDS_TABLE_NAME}(user_text TEXT, date_added TEXT)\") \n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {GRAMMER_TABLE_NAME}(user_text TEXT, date_added TEXT)\")\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {QUESTIONS_TABLE_NAME}(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: \n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()",
         "detail": "data.database",
         "documentation": {}
     },
@@ -237,7 +461,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TABLE_COL\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,))\n    if cursor.fetchone():\n        logger.debug(\"word already exists in the database.\")\n        cursor.close()\n        return False\n    else:\n        cursor.execute(",
+        "peekOfCode": "def add_word_to_db(word: str) -> bool: \n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,))\n    if cursor.fetchone():\n        logger.debug(\"word already exists in the database.\")\n        cursor.close()\n        return False\n    else:\n        cursor.execute(",
         "detail": "data.database",
         "documentation": {}
     },
@@ -246,7 +470,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def add_grammer_to_db(grammer: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            \"INSERT INTO grammer (user_text, date_added) VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
+        "peekOfCode": "def add_grammer_to_db(grammer: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {GRAMMER_TABLE_NAME} WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            f\"INSERT INTO {GRAMMER_TABLE_NAME} (user_text, date_added) VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
         "detail": "data.database",
         "documentation": {}
     },
@@ -255,7 +479,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def get_all_info_dates(table: str) -> Optional[list]:\n    \"\"\" \n    Return all info learnd in the given dates\n    \"\"\"\n    if table in (\"word\", \"grammer\"):\n        connection = sqlite3.connect('japgo_db')  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() ",
+        "peekOfCode": "def get_all_info_dates(table: str) -> list[str|None]:\n    \"\"\" \n    Return all info learnd in the given dates\n    \"\"\"\n    if table in [WORDS_TABLE_NAME, GRAMMER_TABLE_NAME]:\n        connection = sqlite3.connect(DATA_BASE_PATH)  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() ",
         "detail": "data.database",
         "documentation": {}
     },
@@ -264,7 +488,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def get_info_by_date(date_requested: str) -> list:\n    connection = sqlite3.connect('japgo_db')\n    cursor = connection.cursor()\n    cursor.execute(\"SELECT user_text FROM grammer WHERE date_added=?\", (date_requested,))\n    all_grammer = cursor.fetchall()\n    cursor.execute(\"SELECT user_text FROM word WHERE date_added=?\", (date_requested,))\n    all_words = cursor.fetchall()\n    cursor.close()\n    return all_grammer + all_words\ndef add_question_to_db(question_to_add:str) -> None:",
+        "peekOfCode": "def get_info_by_date(date_requested: str) -> list:\n    connection = sqlite3.connect(DATA_BASE_PATH)\n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT user_text FROM {GRAMMER_TABLE_NAME} WHERE date_added=?\", (date_requested,))\n    all_grammer = cursor.fetchall()\n    cursor.execute(f\"SELECT user_text FROM {WORDS_TABLE_NAME} WHERE date_added=?\", (date_requested,))\n    all_words = cursor.fetchall()\n    cursor.close()\n    return all_grammer + all_words\ndef add_question_to_db(question_to_add:str) -> None:",
         "detail": "data.database",
         "documentation": {}
     },
@@ -273,7 +497,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def add_question_to_db(question_to_add:str) -> None:\n    connection = sqlite3.connect('japgo_db')\n    cursor = connection.cursor()\n    cursor.execute(\"SELECT * FROM questions WHERE question=?\", (question_to_add,))\n    if cursor.fetchone():\n        cursor.close()\n        return\n    cursor.execute(\"INSERT INTO questions VALUES (?,?,?)\", (question_to_add, 0, time.strftime('%Y-%m-%d'),))\n    connection.commit()\n    cursor.close()",
+        "peekOfCode": "def add_question_to_db(question_to_add:str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)\n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE question=?\", (question_to_add,))\n    if cursor.fetchone():\n        cursor.close()\n        return\n    cursor.execute(f\"INSERT INTO {QUESTIONS_TABLE_NAME} VALUES (?,?,?)\", (question_to_add, 0, time.strftime('%Y-%m-%d'),))\n    connection.commit()\n    cursor.close()",
         "detail": "data.database",
         "documentation": {}
     },
@@ -282,7 +506,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def delete_user_text_in_word_or_grammer(table: str, user_text: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    if table in ['word', 'grammer']:\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    cursor.close()\ndef delete_question(question: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()",
+        "peekOfCode": "def delete_user_text_in_word_or_grammer(table: str, user_text: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    if table in ({WORDS_TABLE_NAME}, {GRAMMER_TABLE_NAME}):\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    cursor.close()\ndef delete_question(question: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()",
         "detail": "data.database",
         "documentation": {}
     },
@@ -291,7 +515,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def delete_question(question: str) -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"DELETE FROM questions WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef pull_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
+        "peekOfCode": "def delete_question(question: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"DELETE FROM {QUESTIONS_TABLE_NAME} WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef pull_added_today(table: str):\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
         "detail": "data.database",
         "documentation": {}
     },
@@ -300,7 +524,7 @@
         "kind": 2,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "def pull_added_today(table: str):\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
+        "peekOfCode": "def pull_added_today(table: str):\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
         "detail": "data.database",
         "documentation": {}
     },
@@ -309,7 +533,7 @@
         "kind": 5,
         "importPath": "data.database",
         "description": "data.database",
-        "peekOfCode": "logger = logging.getLogger('data_base')\ndef create_db() -> None:\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS word(user_text TEXT, date_added TEXT)\") \n    cursor.execute(\"CREATE TABLE IF NOT EXISTS grammer(user_text TEXT, date_added TEXT)\")\n    cursor.execute(\"CREATE TABLE IF NOT EXISTS questions(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: #word should be in the format of WORD_TABLE_COL\n    connection = sqlite3.connect('japgo_db')  ",
+        "peekOfCode": "logger = logging.getLogger('data_base')\ndef create_db() -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {WORDS_TABLE_NAME}(user_text TEXT, date_added TEXT)\") \n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {GRAMMER_TABLE_NAME}(user_text TEXT, date_added TEXT)\")\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {QUESTIONS_TABLE_NAME}(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: \n    connection = sqlite3.connect(DATA_BASE_PATH)  ",
         "detail": "data.database",
         "documentation": {}
     },
@@ -318,8 +542,17 @@
         "kind": 5,
         "importPath": "handlers.on_message",
         "description": "handlers.on_message",
-        "peekOfCode": "logger = logging.getLogger('on_message')\nasync def alert_homework(message: discord.Message, client: discord.Client) -> None:\n    REMINDER_SECONDS = 5760\n    reminder_days = int(REMINDER_SECONDS // (24 * 60))\n    if message.channel.name == \"homework-help\":\n        await message.reply(content=(\n            f\"\"\"Please react 👍 to this message when completed.\n            I will remind you in {reminder_days} days.\"\"\"\n            ))\n        def check_homework(reaction, user):",
+        "peekOfCode": "logger = logging.getLogger('on_message')\nasync def alert_homework(message: discord.Message, client: discord.Client) -> None:\n    if message.channel.name == HOME_WORK_CHANNEL_NAME:\n        await message.reply(content=(\n            f\"\"\"Please react 👍 to this message when completed.\n            I will remind you in {DAYS_HOMEWORK_REMINDER} days.\"\"\"\n            ))\n        def check_homework(reaction, user):\n            return user == message.author and str(reaction.emoji) == '👍'\n        try:",
         "detail": "handlers.on_message",
+        "documentation": {}
+    },
+    {
+        "label": "clean_user_input_for_ai",
+        "kind": 2,
+        "importPath": "services.ai_responses",
+        "description": "services.ai_responses",
+        "peekOfCode": "def clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions\n    )\n    return combined",
+        "detail": "services.ai_responses",
         "documentation": {}
     },
     {
@@ -327,7 +560,7 @@
         "kind": 2,
         "importPath": "services.ai_responses",
         "description": "services.ai_responses",
-        "peekOfCode": "def create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]\n    try:",
+        "peekOfCode": "def create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system.\n    \"\"\"\n    if len(str(info_to_test)) > LONGEST_INPUT_OF_DATA_TO_QUIZ:\n        logger.debug(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:LONGEST_INPUT_OF_DATA_TO_QUIZ]\n    try:",
         "detail": "services.ai_responses",
         "documentation": {}
     },
@@ -336,16 +569,7 @@
         "kind": 5,
         "importPath": "services.ai_responses",
         "description": "services.ai_responses",
-        "peekOfCode": "logger = logging.getLogger('API_AI_REQURSTS')\nopen_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system",
-        "detail": "services.ai_responses",
-        "documentation": {}
-    },
-    {
-        "label": "open_ai_token",
-        "kind": 5,
-        "importPath": "services.ai_responses",
-        "description": "services.ai_responses",
-        "peekOfCode": "open_ai_token = os.getenv('open_ai_token') # Requires token as an env variable\nif not open_ai_token:\n    raise RuntimeError(\"Missing OPENAI token environment variable\")\nai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"",
+        "peekOfCode": "logger = logging.getLogger('AI_responses')\nai_client = OpenAI(api_key=OPENAI_API_KEY)\ndef clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions",
         "detail": "services.ai_responses",
         "documentation": {}
     },
@@ -354,7 +578,7 @@
         "kind": 5,
         "importPath": "services.ai_responses",
         "description": "services.ai_responses",
-        "peekOfCode": "ai_client = OpenAI(api_key=open_ai_token) \ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system\n    \"\"\"\n    if len(str(info_to_test)) > 500:\n        logger.warning(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:500]",
+        "peekOfCode": "ai_client = OpenAI(api_key=OPENAI_API_KEY)\ndef clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions\n    )",
         "detail": "services.ai_responses",
         "documentation": {}
     },
@@ -415,45 +639,36 @@
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "logger = logging.getLogger('main')\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )",
-        "detail": "main",
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "logger = logging.getLogger(\"config\")\n# --- discord ---\nDISCORD_INTENTS:discord.Intents = discord.Intents.default()\nDISCORD_INTENTS.message_content = True\nDISCORD_CLIENT: discord.Client = discord.Client(intents=DISCORD_INTENTS)\n# --- tokens ---\nDISCORD_TOKEN: str | None = os.getenv(\"JAPGO_DISCORD_TOKEN\")\nOPENAI_API_KEY: str | None = os.getenv('open_ai_token')\n# --- bot settings ---\nBOT_PREFIX: str = \"!japgo\" # Small caps",
+        "detail": "config",
         "documentation": {}
     },
     {
-        "label": "intents",
+        "label": "DISCORD_INTENTS:discord.Intents",
         "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()",
-        "detail": "main",
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DISCORD_INTENTS:discord.Intents = discord.Intents.default()\nDISCORD_INTENTS.message_content = True\nDISCORD_CLIENT: discord.Client = discord.Client(intents=DISCORD_INTENTS)\n# --- tokens ---\nDISCORD_TOKEN: str | None = os.getenv(\"JAPGO_DISCORD_TOKEN\")\nOPENAI_API_KEY: str | None = os.getenv('open_ai_token')\n# --- bot settings ---\nBOT_PREFIX: str = \"!japgo\" # Small caps\nif BOT_PREFIX != BOT_PREFIX.lower():\n    logger.warning(\"BOT_PREFIX includes capital letters.\")",
+        "detail": "config",
         "documentation": {}
     },
     {
-        "label": "intents.message_content",
+        "label": "DISCORD_INTENTS.message_content",
         "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:",
-        "detail": "main",
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DISCORD_INTENTS.message_content = True\nDISCORD_CLIENT: discord.Client = discord.Client(intents=DISCORD_INTENTS)\n# --- tokens ---\nDISCORD_TOKEN: str | None = os.getenv(\"JAPGO_DISCORD_TOKEN\")\nOPENAI_API_KEY: str | None = os.getenv('open_ai_token')\n# --- bot settings ---\nBOT_PREFIX: str = \"!japgo\" # Small caps\nif BOT_PREFIX != BOT_PREFIX.lower():\n    logger.warning(\"BOT_PREFIX includes capital letters.\")\nGENERAL_REACTION_SECONDS: int = 100",
+        "detail": "config",
         "documentation": {}
     },
     {
-        "label": "client",
+        "label": "logger",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "client = discord.Client(intents=intents)\ncreate_db()\n@client.event\nasync def on_message(message):\n    logger.debug(\n        f\"{message.author} sent in {message.channel.name}: {message.content}\"\n        )\n    message.content = message.content.lower()\n    if message.author == client.user:\n        return",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "DISCORD_TOKEN",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "DISCORD_TOKEN = os.getenv(\"JAPGO_DISCORD_TOKEN\") # Requires token as an env variable\nclient.run(DISCORD_TOKEN)",
+        "peekOfCode": "logger = logging.getLogger('main')\nclient: discord.Client = DISCORD_CLIENT\ncreate_db()\nclient.run(DISCORD_TOKEN)",
         "detail": "main",
         "documentation": {}
     }
