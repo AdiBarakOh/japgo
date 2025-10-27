@@ -20,30 +20,31 @@ from config import (
     WORDS_TABLE_NAME,
 )
 from services.ai_responses import create_quiz
-from data.database import add_question_to_db, get_info_by_date, get_all_info_dates
+from services.database import add_question_to_db, get_info_by_date, get_all_info_dates
 
-logger = logging.getLogger('quizes')
+logger = logging.getLogger('quiz')
 
 
 class Quiz:
-    QUIZ_START_MESSAGE = """Do you want me to create a quiz for you?
+    QUIZ_START_MESSAGE: str = """Do you want me to create a quiz for you?
             React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.
             After each question, every message you send WILL count as your answer and will be scored.
             No backsies!
             Please answer carefully."""   
-    NOT_ENOUGH_INPUT = (
+    NOT_ENOUGH_INPUT: str = (
                     "Not enough data to test, " +
                     "try and add more words and grammer!"
     )
     
 
     def __init__(self, message: discord.Message, client: discord.Client):
-        self.original_message = message
-        self.client = client
-        self.ai_quiz = None
+        self.original_message: discord.Message = message
+        self.client: discord.Client = client
+        self.ai_quiz: list[str] | None = None
     
         
     def calc_how_many_questions(self, reaction: str) -> int:
+        question_number: int = 0
         if reaction == SHORT_QUIZ_REACTION:
             question_number = SHORT_QUIZ_QUESTIONS
         elif reaction == MEDIUM_QUIZ_REACTION:
@@ -51,7 +52,6 @@ class Quiz:
         elif reaction == LONG_QUIZ_REACTION:
             question_number = LONG_QUIZ_QUESTIONS
         else:
-            question_number = 0
             logger.debug("Invalid reaction to start quiz question.")
         return question_number
     
@@ -60,19 +60,19 @@ class Quiz:
         """
         Returns random dates on which information was learned
         """
-        words = get_all_info_dates(WORDS_TABLE_NAME)
-        grammers = get_all_info_dates(GRAMMER_TABLE_NAME)
+        words: list[str | None] = get_all_info_dates(WORDS_TABLE_NAME)
+        grammers: list[str | None] = get_all_info_dates(GRAMMER_TABLE_NAME)
         all_dates = words + grammers
         if len(all_dates) >= 1:
-            dates_to_choose_count = min(len(all_dates), MAX_DATES_TO_QUIZ)
-            random_dates_unclean = random.choices(all_dates, k=dates_to_choose_count)
-            random_dates_cleaned = [(str(day)).strip("""('" ,)""") for day in set(random_dates_unclean)]
+            dates_to_choose_count: int = min(len(all_dates), MAX_DATES_TO_QUIZ)
+            random_dates_unclean: list[str] = random.choices(all_dates, k=dates_to_choose_count)
+            random_dates_cleaned: list[str] = [(str(day)).strip("""('" ,)""") for day in set(random_dates_unclean)]
             return random_dates_cleaned
         return None
     
     
     def pull_info_for_quiz(self, dates: list[str]) -> list[str]:
-        info_for_test = []
+        info_for_test: list[str | None] = []
         for day in dates:
             for info in get_info_by_date(day):
                 info_for_test.append(str(info).strip("""('" ,)"""))
@@ -87,7 +87,7 @@ class Quiz:
         return False
     
             
-    async def reaction_to_quiz_start(self) -> Optional[discord.Reaction]:  
+    async def reaction_to_quiz_start(self) -> discord.Reaction | None:  
         await self.original_message.channel.send(self.QUIZ_START_MESSAGE)
         try:
             reaction, _ = await self.client.wait_for(
@@ -104,11 +104,10 @@ class Quiz:
     
     
     async def configure_quiz(self, question_number: int) -> None:
-        dates_to_test = self.pull_dates_for_quiz()
-        knowledge_for_test = None
+        dates_to_test: list[str | None] = self.pull_dates_for_quiz()
+        knowledge_for_test: list[str] = None
         if dates_to_test:
-            knowledge_for_test = self.pull_info_for_quiz(dates_to_test)
-        if knowledge_for_test is not None:
+            knowledge_for_test: list[str] = self.pull_info_for_quiz(dates_to_test)
             self.ai_quiz = create_quiz(question_number, knowledge_for_test)
         else:
             await self.original_message.channel.send(self.NOT_ENOUGH_INPUT)
@@ -141,11 +140,11 @@ class Quiz:
 
 
     async def main_quiz(self) -> None:
-        reaction = await self.reaction_to_quiz_start()
+        reaction: discord.Reaction | None = await self.reaction_to_quiz_start()
         if reaction is None:
             return
         
-        questions_number = self.calc_how_many_questions(str(reaction.emoji))
+        questions_number: int = self.calc_how_many_questions(str(reaction.emoji))
         if questions_number == 0:
             return
         

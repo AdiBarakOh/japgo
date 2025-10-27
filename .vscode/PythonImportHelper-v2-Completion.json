@@ -1,5 +1,23 @@
 [
     {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -15,47 +33,6 @@
         "importPath": "sqlite3",
         "description": "sqlite3",
         "detail": "sqlite3",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "DATA_BASE_PATH",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "GRAMMER_TABLE_NAME",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "QUESTIONS_TABLE_NAME",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "WORDS_TABLE_NAME",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
         "documentation": {}
     },
     {
@@ -123,6 +100,14 @@
         "documentation": {}
     },
     {
+        "label": "clean_user_input_for_ai",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "LONGEST_INPUT_OF_DATA_TO_QUIZ",
         "importPath": "config",
         "description": "config",
@@ -148,6 +133,38 @@
     },
     {
         "label": "OPENAI_MODEL_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_BASE_PATH",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "GRAMMER_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "QUESTIONS_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "WORDS_TABLE_NAME",
         "importPath": "config",
         "description": "config",
         "isExtraImport": true,
@@ -259,6 +276,78 @@
         "documentation": {}
     },
     {
+        "label": "GRAMMER_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "QUESTIONS_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "WORDS_TABLE_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SHORT_QUIZ_REACTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SHORT_QUIZ_QUESTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIUM_QUIZ_REACTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIUM_QUIZ_QUESTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LONG_QUIZ_QUESTIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LONG_QUIZ_REACTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "DISCORD_CLIENT",
         "importPath": "config",
         "description": "config",
@@ -275,101 +364,139 @@
         "documentation": {}
     },
     {
-        "label": "asyncio",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
-        "documentation": {}
-    },
-    {
-        "label": "discord",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "discord",
-        "description": "discord",
-        "detail": "discord",
-        "documentation": {}
-    },
-    {
         "label": "add_grammer_to_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "add_word_to_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "add_question_to_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "get_info_by_date",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "get_all_info_dates",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "add_grammer_to_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "add_question_to_db",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "add_word_to_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "create_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "delete_user_text_in_word_or_grammer",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "delete_question",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_info_dates",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "pull_added_today",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "add_word_to_db",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
         "documentation": {}
     },
     {
         "label": "create_db",
-        "importPath": "data.database",
-        "description": "data.database",
+        "importPath": "services.database",
+        "description": "services.database",
         "isExtraImport": true,
-        "detail": "data.database",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "Quiz",
+        "importPath": "services.quiz",
+        "description": "services.quiz",
+        "isExtraImport": true,
+        "detail": "services.quiz",
         "documentation": {}
     },
     {
@@ -394,6 +521,15 @@
         "description": "openai",
         "isExtraImport": true,
         "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -422,15 +558,6 @@
         "documentation": {}
     },
     {
-        "label": "string",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "string",
-        "description": "string",
-        "detail": "string",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -445,96 +572,6 @@
         "description": "handlers",
         "isExtraImport": true,
         "detail": "handlers",
-        "documentation": {}
-    },
-    {
-        "label": "create_db",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def create_db() -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {WORDS_TABLE_NAME}(user_text TEXT, date_added TEXT)\") \n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {GRAMMER_TABLE_NAME}(user_text TEXT, date_added TEXT)\")\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {QUESTIONS_TABLE_NAME}(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: \n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "add_word_to_db",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def add_word_to_db(word: str) -> bool: \n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,))\n    if cursor.fetchone():\n        logger.debug(\"word already exists in the database.\")\n        cursor.close()\n        return False\n    else:\n        cursor.execute(",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "add_grammer_to_db",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def add_grammer_to_db(grammer: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {GRAMMER_TABLE_NAME} WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            f\"INSERT INTO {GRAMMER_TABLE_NAME} (user_text, date_added) VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "get_all_info_dates",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def get_all_info_dates(table: str) -> list[str|None]:\n    \"\"\" \n    Return all info learnd in the given dates\n    \"\"\"\n    if table in [WORDS_TABLE_NAME, GRAMMER_TABLE_NAME]:\n        connection = sqlite3.connect(DATA_BASE_PATH)  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() ",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "get_info_by_date",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def get_info_by_date(date_requested: str) -> list:\n    connection = sqlite3.connect(DATA_BASE_PATH)\n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT user_text FROM {GRAMMER_TABLE_NAME} WHERE date_added=?\", (date_requested,))\n    all_grammer = cursor.fetchall()\n    cursor.execute(f\"SELECT user_text FROM {WORDS_TABLE_NAME} WHERE date_added=?\", (date_requested,))\n    all_words = cursor.fetchall()\n    cursor.close()\n    return all_grammer + all_words\ndef add_question_to_db(question_to_add:str) -> None:",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "add_question_to_db",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def add_question_to_db(question_to_add:str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)\n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE question=?\", (question_to_add,))\n    if cursor.fetchone():\n        cursor.close()\n        return\n    cursor.execute(f\"INSERT INTO {QUESTIONS_TABLE_NAME} VALUES (?,?,?)\", (question_to_add, 0, time.strftime('%Y-%m-%d'),))\n    connection.commit()\n    cursor.close()",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "delete_user_text_in_word_or_grammer",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def delete_user_text_in_word_or_grammer(table: str, user_text: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    if table in ({WORDS_TABLE_NAME}, {GRAMMER_TABLE_NAME}):\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    cursor.close()\ndef delete_question(question: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "delete_question",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def delete_question(question: str) -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"DELETE FROM {QUESTIONS_TABLE_NAME} WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef pull_added_today(table: str):\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "pull_added_today",
-        "kind": 2,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "def pull_added_today(table: str):\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
-        "detail": "data.database",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "kind": 5,
-        "importPath": "data.database",
-        "description": "data.database",
-        "peekOfCode": "logger = logging.getLogger('data_base')\ndef create_db() -> None:\n    connection = sqlite3.connect(DATA_BASE_PATH)  \n    cursor = connection.cursor()\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {WORDS_TABLE_NAME}(user_text TEXT, date_added TEXT)\") \n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {GRAMMER_TABLE_NAME}(user_text TEXT, date_added TEXT)\")\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {QUESTIONS_TABLE_NAME}(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str) -> bool: \n    connection = sqlite3.connect(DATA_BASE_PATH)  ",
-        "detail": "data.database",
         "documentation": {}
     },
     {
@@ -556,15 +593,6 @@
         "documentation": {}
     },
     {
-        "label": "clean_user_input_for_ai",
-        "kind": 2,
-        "importPath": "services.ai_responses",
-        "description": "services.ai_responses",
-        "peekOfCode": "def clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions\n    )\n    return combined",
-        "detail": "services.ai_responses",
-        "documentation": {}
-    },
-    {
         "label": "create_quiz",
         "kind": 2,
         "importPath": "services.ai_responses",
@@ -578,7 +606,7 @@
         "kind": 5,
         "importPath": "services.ai_responses",
         "description": "services.ai_responses",
-        "peekOfCode": "logger = logging.getLogger('AI_responses')\nai_client = OpenAI(api_key=OPENAI_API_KEY)\ndef clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions",
+        "peekOfCode": "logger = logging.getLogger('AI_responses')\nai_client = OpenAI(api_key=OPENAI_API_KEY)\ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system.\n    \"\"\"\n    if len(str(info_to_test)) > LONGEST_INPUT_OF_DATA_TO_QUIZ:\n        logger.debug(\"the create quiz received too much info to proccess.\")",
         "detail": "services.ai_responses",
         "documentation": {}
     },
@@ -587,8 +615,98 @@
         "kind": 5,
         "importPath": "services.ai_responses",
         "description": "services.ai_responses",
-        "peekOfCode": "ai_client = OpenAI(api_key=OPENAI_API_KEY)\ndef clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions\n    )",
+        "peekOfCode": "ai_client = OpenAI(api_key=OPENAI_API_KEY)\ndef create_quiz(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    \"\"\"\n    Creates a quiz from learned knowledge using open-ai api system.\n    \"\"\"\n    if len(str(info_to_test)) > LONGEST_INPUT_OF_DATA_TO_QUIZ:\n        logger.debug(\"the create quiz received too much info to proccess.\")\n        info_to_test = str(info_to_test)[:LONGEST_INPUT_OF_DATA_TO_QUIZ]",
         "detail": "services.ai_responses",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def create_db(db_path: str = DATA_BASE_PATH) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {WORDS_TABLE_NAME}(user_text TEXT, date_added TEXT)\") \n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {GRAMMER_TABLE_NAME}(user_text TEXT, date_added TEXT)\")\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {QUESTIONS_TABLE_NAME}(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str, db_path: str = DATA_BASE_PATH) -> bool: \n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "add_word_to_db",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def add_word_to_db(word: str, db_path: str = DATA_BASE_PATH) -> bool: \n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,))\n    if cursor.fetchone():\n        logger.debug(\"word already exists in the database.\")\n        cursor.close()\n        return False\n    else:\n        cursor.execute(",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "add_grammer_to_db",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def add_grammer_to_db(grammer: str, db_path: str = DATA_BASE_PATH) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {GRAMMER_TABLE_NAME} WHERE user_text=?\", (grammer,))\n    if cursor.fetchone():\n        logger.debug(\"grammer already exists in the database.\")\n    else:\n        cursor.execute(\n            f\"INSERT INTO {GRAMMER_TABLE_NAME} (user_text, date_added) VALUES (?, ?)\",\n            (grammer, time.strftime('%Y-%m-%d'),)",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_info_dates",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def get_all_info_dates(table: str, db_path: str = DATA_BASE_PATH) -> list[str|None]:\n    \"\"\" \n    Return all info learnd in the given dates\n    \"\"\"\n    if table in [WORDS_TABLE_NAME, GRAMMER_TABLE_NAME]:\n        connection = sqlite3.connect(db_path)  \n        cursor = connection.cursor()\n        cursor.execute(f\"SELECT date_added FROM {table}\")\n        all_info = cursor.fetchall()\n        cursor.close() ",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_info_by_date",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def get_info_by_date(date_requested: str, db_path: str = DATA_BASE_PATH) -> list:\n    connection = sqlite3.connect(db_path)\n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT user_text FROM {GRAMMER_TABLE_NAME} WHERE date_added=?\", (date_requested,))\n    all_grammer = cursor.fetchall()\n    cursor.execute(f\"SELECT user_text FROM {WORDS_TABLE_NAME} WHERE date_added=?\", (date_requested,))\n    all_words = cursor.fetchall()\n    cursor.close()\n    return all_grammer + all_words\ndef add_question_to_db(question_to_add:str, db_path: str = DATA_BASE_PATH) -> None:",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "add_question_to_db",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def add_question_to_db(question_to_add:str, db_path: str = DATA_BASE_PATH) -> None:\n    connection = sqlite3.connect(db_path)\n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE question=?\", (question_to_add,))\n    if cursor.fetchone():\n        cursor.close()\n        return\n    cursor.execute(f\"INSERT INTO {QUESTIONS_TABLE_NAME} VALUES (?,?,?)\", (question_to_add, 0, time.strftime('%Y-%m-%d'),))\n    connection.commit()\n    cursor.close()",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user_text_in_word_or_grammer",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def delete_user_text_in_word_or_grammer(\n        table: str, user_text: str, db_path: str = DATA_BASE_PATH\n) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    if table in ({WORDS_TABLE_NAME}, {GRAMMER_TABLE_NAME}):\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    cursor.close()\ndef delete_question(question: str, db_path: str = DATA_BASE_PATH) -> None:",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "delete_question",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def delete_question(question: str, db_path: str = DATA_BASE_PATH) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"DELETE FROM {QUESTIONS_TABLE_NAME} WHERE question=?\", (question,))\n    connection.commit()\n    cursor.close()\ndef pull_added_today(table: str, db_path: str = DATA_BASE_PATH) -> list[str]:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "pull_added_today",
+        "kind": 2,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "def pull_added_today(table: str, db_path: str = DATA_BASE_PATH) -> list[str]:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"SELECT * FROM {table} WHERE date_added=?\", (time.strftime('%Y-%m-%d'),))\n    added_today = cursor.fetchall()\n    cursor.close()\n    return added_today",
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "services.database",
+        "description": "services.database",
+        "peekOfCode": "logger = logging.getLogger('data_base')\ndef create_db(db_path: str = DATA_BASE_PATH) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {WORDS_TABLE_NAME}(user_text TEXT, date_added TEXT)\") \n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {GRAMMER_TABLE_NAME}(user_text TEXT, date_added TEXT)\")\n    cursor.execute(f\"CREATE TABLE IF NOT EXISTS {QUESTIONS_TABLE_NAME}(question TEXT, score INT, date_added TEXT)\")\n    cursor.close()\ndef add_word_to_db(word: str, db_path: str = DATA_BASE_PATH) -> bool: \n    connection = sqlite3.connect(db_path)  ",
+        "detail": "services.database",
         "documentation": {}
     },
     {
@@ -596,7 +714,7 @@
         "kind": 6,
         "importPath": "services.quiz",
         "description": "services.quiz",
-        "peekOfCode": "class Quiz:\n    QUIZ_START_MESSAGE = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"\n    )",
+        "peekOfCode": "class Quiz:\n    QUIZ_START_MESSAGE: str = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT: str = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"\n    )",
         "detail": "services.quiz",
         "documentation": {}
     },
@@ -605,44 +723,134 @@
         "kind": 5,
         "importPath": "services.quiz",
         "description": "services.quiz",
-        "peekOfCode": "logger = logging.getLogger('quizes')\nclass Quiz:\n    QUIZ_START_MESSAGE = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"",
+        "peekOfCode": "logger = logging.getLogger('quiz')\nclass Quiz:\n    QUIZ_START_MESSAGE: str = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT: str = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"",
         "detail": "services.quiz",
         "documentation": {}
     },
     {
-        "label": "create_random_text",
+        "label": "test_create_db",
         "kind": 2,
-        "importPath": "tests.test",
-        "description": "tests.test",
-        "peekOfCode": "def create_random_text(lengh: int):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    random_characters = ''.join([random.choice(characters) for i in range(lengh)])\n    return random_characters\ndef test_adding_word_to_db() -> bool:\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) ",
-        "detail": "tests.test",
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_create_db():\n    create_db(TEMP_DB_PATH)\n    assert os.path.exists(TEMP_DB_PATH)\ndef test_adding_word_to_db():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()",
+        "detail": "tests.test_database",
         "documentation": {}
     },
     {
         "label": "test_adding_word_to_db",
         "kind": 2,
-        "importPath": "tests.test",
-        "description": "tests.test",
-        "peekOfCode": "def test_adding_word_to_db() -> bool:\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM word WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('word', word)\n    return added_result is not None",
-        "detail": "tests.test",
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_adding_word_to_db():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('word', word, TEMP_DB_PATH)\n    assert added_result is not None",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "test_delete_user_text_in_word_or_grammer",
+        "kind": 2,
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_delete_user_text_in_word_or_grammer():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    delete_user_text_in_word_or_grammer(WORDS_TABLE_NAME, word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)\n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    result = cursor.fetchone()\n    cursor.close()\n    assert result is None",
+        "detail": "tests.test_database",
         "documentation": {}
     },
     {
         "label": "test_adding_grammer_to_db",
         "kind": 2,
-        "importPath": "tests.test",
-        "description": "tests.test",
-        "peekOfCode": "def test_adding_grammer_to_db() -> bool:\n    word = \"this is adding_grammer_to_db grammer\"\n    add_grammer_to_db(word)\n    connection = sqlite3.connect('japgo_db')  \n    cursor = connection.cursor()  \n    cursor.execute(\"SELECT * FROM grammer WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return added_result is not None",
-        "detail": "tests.test",
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_adding_grammer_to_db():\n    grammer = \"this is adding_grammer_to_db grammer\"\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {GRAMMER_TABLE_NAME} WHERE user_text=?\", (grammer,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    assert added_result is not None\ndef test_pull_info_for_quiz():",
+        "detail": "tests.test_database",
         "documentation": {}
     },
     {
         "label": "test_pull_info_for_quiz",
         "kind": 2,
-        "importPath": "tests.test",
-        "description": "tests.test",
-        "peekOfCode": "def test_pull_info_for_quiz() -> bool:\n    word = \"this is pull_info_for_test word\"\n    add_grammer_to_db(word)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    delete_user_text_in_word_or_grammer('grammer', word)\n    return word in info_to_test",
-        "detail": "tests.test",
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_pull_info_for_quiz():\n    grammer = \"this is pull_info_for_test word\"\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    assert grammer in info_to_test\ndef test_pull_added_today():\n    grammer = \"this is pull_added_today test\"\n    word = \"this is pull_added_today test\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    add_grammer_to_db(grammer, TEMP_DB_PATH)",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "test_pull_added_today",
+        "kind": 2,
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_pull_added_today():\n    grammer = \"this is pull_added_today test\"\n    word = \"this is pull_added_today test\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    grammers = pull_added_today(GRAMMER_TABLE_NAME, TEMP_DB_PATH)\n    words = pull_added_today(WORDS_TABLE_NAME, TEMP_DB_PATH)\n    assert word in words\n    assert grammer in grammers\ndef test_add_question_to_db():",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "test_add_question_to_db",
+        "kind": 2,
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_add_question_to_db():\n    question = (\"this is a question?\")\n    add_question_to_db(question, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?\", (question,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    assert added_result is not None\ndef test_delete_question():",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "test_delete_question",
+        "kind": 2,
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_delete_question():\n    question = (\"this is a question?\")\n    add_question_to_db(question, TEMP_DB_PATH)\n    delete_question(question, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?\", (question,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    assert added_result is None",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_all_info_dates",
+        "kind": 2,
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "def test_get_all_info_dates():\n    word = \"get_all_info_dates\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    dates = get_all_info_dates(WORDS_TABLE_NAME, TEMP_DB_PATH)\n    assert time.strftime('%Y-%m-%d') in dates",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "TEMP_DB_PATH",
+        "kind": 5,
+        "importPath": "tests.test_database",
+        "description": "tests.test_database",
+        "peekOfCode": "TEMP_DB_PATH = str(lambda tmp_path: tmp_path)\ndef test_create_db():\n    create_db(TEMP_DB_PATH)\n    assert os.path.exists(TEMP_DB_PATH)\ndef test_adding_word_to_db():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) ",
+        "detail": "tests.test_database",
+        "documentation": {}
+    },
+    {
+        "label": "test_Qui",
+        "kind": 2,
+        "importPath": "tests.test_quiz",
+        "description": "tests.test_quiz",
+        "peekOfCode": "def test_Quiz ():\n    assert isinstance(Quiz(), Quiz)\ndef test_calc_how_many_questions():\n    assert (\n        Quiz.calc_how_many_questions(SHORT_QUIZ_REACTION) == SHORT_QUIZ_QUESTIONS\n    )\n    assert (\n        Quiz.calc_how_many_questions(MEDIUM_QUIZ_REACTION) == MEDIUM_QUIZ_QUESTIONS\n    )\n    assert (",
+        "detail": "tests.test_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "test_calc_how_many_questions",
+        "kind": 2,
+        "importPath": "tests.test_quiz",
+        "description": "tests.test_quiz",
+        "peekOfCode": "def test_calc_how_many_questions():\n    assert (\n        Quiz.calc_how_many_questions(SHORT_QUIZ_REACTION) == SHORT_QUIZ_QUESTIONS\n    )\n    assert (\n        Quiz.calc_how_many_questions(MEDIUM_QUIZ_REACTION) == MEDIUM_QUIZ_QUESTIONS\n    )\n    assert (\n        Quiz.calc_how_many_questions(LONG_QUIZ_REACTION) == LONG_QUIZ_QUESTIONS\n    )",
+        "detail": "tests.test_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "test_quiz_info_collecting",
+        "kind": 2,
+        "importPath": "tests.test_quiz",
+        "description": "tests.test_quiz",
+        "peekOfCode": "def test_quiz_info_collecting(tmp_path):\n    create_db(tmp_path)\n    word = \"test word\"\n    add_word_to_db(word, tmp_path)\n    assert (time.strftime('%Y-%m-%d')) in Quiz.pull_dates_for_quiz\n    assert word in Quiz.pull_info_for_quiz(time.strftime('%Y-%m-%d'))",
+        "detail": "tests.test_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "clean_user_input_for_ai",
+        "kind": 2,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "def clean_user_input_for_ai(\n    how_many_questions: int, info_to_test: list, more_instructions=''\n    ) -> str:\n    combined: str = (\n        f\"this is what I learned at japanease class: {info_to_test}. \" +\n        f\"create ONLY {how_many_questions} questions to help me practice\" +\n        \"(translate, fill the word, verb formations) and more.\" +\n        more_instructions\n    )\n    return combined",
+        "detail": "config",
         "documentation": {}
     },
     {

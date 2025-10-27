@@ -3,8 +3,10 @@ import logging
 import discord
 
 from config import DISCORD_CLIENT, DISCORD_TOKEN
-from data.database import create_db
+from services.database import create_db
 from handlers import on_message
+
+logging.basicConfig(filename='main_log.log', encoding='utf-8', level=logging.DEBUG)
 
 logger = logging.getLogger('main')
 

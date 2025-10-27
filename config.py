@@ -56,6 +56,16 @@ AI_INSTRUCTIONS: str = (
                 "return only questions(no numbering) and answers with:" +
                 f"{QUESTION_SEPERATION}, {ANSWER_SEPARATION}."
             )
+def clean_user_input_for_ai(
+    how_many_questions: int, info_to_test: list, more_instructions=''
+    ) -> str:
+    combined: str = (
+        f"this is what I learned at japanease class: {info_to_test}. " +
+        f"create ONLY {how_many_questions} questions to help me practice" +
+        "(translate, fill the word, verb formations) and more." +
+        more_instructions
+    )
+    return combined
 
 if DISCORD_TOKEN is None: 
     logging.warning("DISCORD_TOKEN was not found as environment variable.")

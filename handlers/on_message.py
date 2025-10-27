@@ -7,12 +7,12 @@ from config import (
     BOT_PREFIX,
     DISCORD_CLIENT,
     GRAMMER_CHANNEL_NAME,
-    HOME_WORK_CHANNEL_NAME,
+    HOME_WORK_CHANNEL_NAME, 
     QUIZ_CHANNEL_NAME,
     DAYS_HOMEWORK_REMINDER,
     WORDS_CHANNEL_NAME,
 )
-from data.database import add_grammer_to_db, add_word_to_db
+from services.database import add_grammer_to_db, add_word_to_db
 from services.quiz import Quiz
 
 client: discord.Client = DISCORD_CLIENT

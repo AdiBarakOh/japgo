@@ -4,6 +4,7 @@ from openai import OpenAI
 
 from config import (
     AI_INSTRUCTIONS,
+    clean_user_input_for_ai,
     LONGEST_INPUT_OF_DATA_TO_QUIZ,
     MAX_OUTPUT_TOKENS,
     OPENAI_API_KEY,
@@ -12,17 +13,6 @@ from config import (
 logger = logging.getLogger('AI_responses')
 
 ai_client = OpenAI(api_key=OPENAI_API_KEY)
-
-def clean_user_input_for_ai(
-    how_many_questions: int, info_to_test: list, more_instructions=''
-    ) -> str:
-    combined: str = (
-        f"this is what I learned at japanease class: {info_to_test}. " +
-        f"create ONLY {how_many_questions} questions to help me practice" +
-        "(translate, fill the word, verb formations) and more." +
-        more_instructions
-    )
-    return combined
 
 def create_quiz(
     how_many_questions: int, info_to_test: list, more_instructions=''
