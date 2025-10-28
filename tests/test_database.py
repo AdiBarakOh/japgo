@@ -13,7 +13,6 @@ from services.database import (
     delete_user_text_in_word_or_grammer,
     delete_question,
     get_all_info_dates,
-    get_info_by_date,
     pull_added_today,
     
 )
