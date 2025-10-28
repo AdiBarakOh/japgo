@@ -1,5 +1,5 @@
 # 🇯🇵 Japgo: Japanese Instructor Discord Bot  
-*A Discord bot that helps you learn Japanese — built in Python.*
+*A Discord bot that helps you learn Japanese: built in Python.*
 
 ---
 
@@ -14,11 +14,11 @@
 ---
 
 ## Structure: 
-  - `main.py` — bot entry point  
-  - `config.py` — configuration and tokens  
-  - `services/` — AI and business logic  
-  - `handlers/` — Discord event and command handlers  
-  - `tests/` — unit and integration tests  
+  - `main.py` - bot entry point  
+  - `config.py` - configuration and tokens  
+  - `services/` - AI and business logic  
+  - `handlers/` - Discord event and command handlers  
+  - `tests/` - unit and integration tests  
 ---
 
 ## ⚙️ Setup  
@@ -57,4 +57,4 @@ Educational and non-commercial use only.
 
 ---
 
-**📚 勉強しましょう — Let’s learn together!**
+**📚 勉強しましょう - Let’s learn together!**
