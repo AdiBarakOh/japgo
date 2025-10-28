@@ -1,15 +1,16 @@
 import asyncio
-import discord
 import logging
 import sqlite3
 
+import discord
+
 from config import (
     BOT_PREFIX,
+    DAYS_HOMEWORK_REMINDER,
     DISCORD_CLIENT,
     GRAMMER_CHANNEL_NAME,
     HOME_WORK_CHANNEL_NAME, 
     QUIZ_CHANNEL_NAME,
-    DAYS_HOMEWORK_REMINDER,
     WORDS_CHANNEL_NAME,
 )
 from services.database import add_grammer_to_db, add_word_to_db
@@ -84,14 +85,14 @@ def on_message_event() -> None:
         if message.channel.name == QUIZ_CHANNEL_NAME:
             logger.debug("quiz should start")
             quiz: Quiz = Quiz(message, client)
-            await quiz.main_quiz()  
-        
+            await quiz.main_quiz()
 
-            
-    
-                    
-        
-                
-                
-                  
-            
+
+
+
+
+
+
+
+
+

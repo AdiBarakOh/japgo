@@ -2,15 +2,15 @@ from pathlib import Path
 import time
 
 from config import (
-    SHORT_QUIZ_REACTION,
-    SHORT_QUIZ_QUESTIONS,
-    MEDIUM_QUIZ_REACTION,
-    MEDIUM_QUIZ_QUESTIONS,
     LONG_QUIZ_QUESTIONS,
     LONG_QUIZ_REACTION,
+    MEDIUM_QUIZ_QUESTIONS,
+    MEDIUM_QUIZ_REACTION,
+    SHORT_QUIZ_QUESTIONS,
+    SHORT_QUIZ_REACTION,
 )
-from services.quiz import Quiz
 from services.database import add_word_to_db, create_db
+from services.quiz import Quiz
 
 
 def test_calc_how_many_questions():
@@ -32,11 +32,11 @@ def test_quiz_info_collecting(tmp_path):
     add_word_to_db(word, TEMP_DB_PATH)
     assert (time.strftime('%Y-%m-%d')) in Quiz.pull_dates_for_quiz(Quiz, TEMP_DB_PATH)
     assert word in Quiz.pull_info_for_quiz(Quiz, [time.strftime('%Y-%m-%d')], TEMP_DB_PATH)
-    
 
-    
 
-    
+
+
+
 
 
 

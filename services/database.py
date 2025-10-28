@@ -3,7 +3,10 @@ import sqlite3
 import time
 
 from config import (
-    DATA_BASE_PATH, GRAMMER_TABLE_NAME, QUESTIONS_TABLE_NAME, WORDS_TABLE_NAME,
+    DATA_BASE_PATH,
+    GRAMMER_TABLE_NAME,
+    QUESTIONS_TABLE_NAME,
+    WORDS_TABLE_NAME,
 )
    
 logger = logging.getLogger('data_base')
@@ -111,7 +114,7 @@ def pull_added_today(table: str, db_path: str = DATA_BASE_PATH) -> list[str]:
     added_today = cursor.fetchall()
     cursor.close()
     return added_today
-    
 
 
-                   
+
+

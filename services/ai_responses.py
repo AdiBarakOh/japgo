@@ -4,12 +4,13 @@ from openai import OpenAI
 
 from config import (
     AI_INSTRUCTIONS,
-    clean_user_input_for_ai,
     LONGEST_INPUT_OF_DATA_TO_QUIZ,
     MAX_OUTPUT_TOKENS,
     OPENAI_API_KEY,
-    OPENAI_MODEL_NAME, 
+    OPENAI_MODEL_NAME,
+    clean_user_input_for_ai,
 )
+
 logger = logging.getLogger('AI_responses')
 
 if OPENAI_API_KEY is not None:
@@ -43,6 +44,6 @@ def create_quiz(
     logger.debug(f"the create quiz took {response.usage.total_tokens} tokens")
     return(response.output_text)
 
-    
-    
+
+
 

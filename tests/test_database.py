@@ -1,7 +1,6 @@
-from pathlib import Path
-
-import sqlite3
 import os
+from pathlib import Path
+import sqlite3
 import time
 
 from config import GRAMMER_TABLE_NAME, QUESTIONS_TABLE_NAME, WORDS_TABLE_NAME
@@ -10,13 +9,13 @@ from services.database import (
     add_question_to_db,
     add_word_to_db,
     create_db,
-    delete_user_text_in_word_or_grammer,
     delete_question,
+    delete_user_text_in_word_or_grammer,
     get_all_info_dates,
     pull_added_today,
-    
 )
 from services.quiz import Quiz
+
 
 def test_create_db(tmp_path):
     TEMP_DB_PATH = Path(str(tmp_path)) / "test_db.sqlite"
@@ -116,6 +115,5 @@ def test_get_all_info_dates(tmp_path):
     add_word_to_db(word, TEMP_DB_PATH)
     dates = get_all_info_dates(WORDS_TABLE_NAME, TEMP_DB_PATH)
     assert (time.strftime('%Y-%m-%d'),) in dates
-    
-    
-    
+
+

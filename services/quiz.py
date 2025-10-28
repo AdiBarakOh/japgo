@@ -1,8 +1,9 @@
 import asyncio
-import discord
 import logging
 import random
 from typing import Optional
+
+import discord
 
 from config import (
     ANSWER_SEPARATION,
@@ -17,11 +18,11 @@ from config import (
     QUESTION_SEPERATION,
     SECONDS_FOR_ANSWER_QUIZ,
     SHORT_QUIZ_QUESTIONS,
-    SHORT_QUIZ_REACTION,  
+    SHORT_QUIZ_REACTION,
     WORDS_TABLE_NAME,
 )
 from services.ai_responses import create_quiz
-from services.database import add_question_to_db, get_info_by_date, get_all_info_dates
+from services.database import add_question_to_db, get_all_info_dates, get_info_by_date
 
 logger = logging.getLogger('quiz')
 
@@ -154,11 +155,10 @@ class Quiz:
         await self.configure_quiz(questions_number)
         if self.ai_quiz:
             await self.quiz_the_user()
-            
-        
-        
-        
-                
-            
-        
-    
+
+
+
+
+
+
+
