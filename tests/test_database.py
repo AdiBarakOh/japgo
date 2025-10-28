@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import pytest
 import sqlite3
 import os
 import time
@@ -81,8 +80,10 @@ def test_pull_added_today(tmp_path):
     add_grammer_to_db(grammer, TEMP_DB_PATH)
     grammers = pull_added_today(GRAMMER_TABLE_NAME, TEMP_DB_PATH)
     words = pull_added_today(WORDS_TABLE_NAME, TEMP_DB_PATH)
-    assert word in words
-    assert grammer in grammers
+    clean_words = [word for words, _ in words]
+    clean_grammer = [grammer for grammer, _ in grammers]
+    assert word in clean_words
+    assert grammer in clean_grammer
     
 def test_add_question_to_db(tmp_path):
     TEMP_DB_PATH = Path(str(tmp_path)) / "test_db.sqlite"
@@ -91,7 +92,7 @@ def test_add_question_to_db(tmp_path):
     add_question_to_db(question, TEMP_DB_PATH)
     connection = sqlite3.connect(TEMP_DB_PATH)  
     cursor = connection.cursor()  
-    cursor.execute(f"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?", (question,)) 
+    cursor.execute(f"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE question=?", (question,)) 
     added_result = cursor.fetchone()
     cursor.close()
     assert added_result is not None
@@ -104,7 +105,7 @@ def test_delete_question(tmp_path):
     delete_question(question, TEMP_DB_PATH)
     connection = sqlite3.connect(TEMP_DB_PATH)  
     cursor = connection.cursor()  
-    cursor.execute(f"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?", (question,)) 
+    cursor.execute(f"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE question=?", (question,)) 
     added_result = cursor.fetchone()
     cursor.close()
     assert added_result is None
@@ -115,7 +116,7 @@ def test_get_all_info_dates(tmp_path):
     word = "get_all_info_dates"
     add_word_to_db(word, TEMP_DB_PATH)
     dates = get_all_info_dates(WORDS_TABLE_NAME, TEMP_DB_PATH)
-    assert time.strftime('%Y-%m-%d') in dates
+    assert (time.strftime('%Y-%m-%d'),) in dates
     
     
     

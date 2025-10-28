@@ -12,7 +12,9 @@ from config import (
 )
 logger = logging.getLogger('AI_responses')
 
-ai_client = OpenAI(api_key=OPENAI_API_KEY)
+if OPENAI_API_KEY is not None:
+    ai_client = OpenAI(api_key=OPENAI_API_KEY)
+
 
 def create_quiz(
     how_many_questions: int, info_to_test: list, more_instructions=''
