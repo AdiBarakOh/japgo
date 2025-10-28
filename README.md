@@ -84,7 +84,6 @@ pytest
 
 ## ⚖️ License  
 Educational and non-commercial use only.  
-(You can replace this with an open-source license like MIT or Apache 2.0.)
 
 ---
 
