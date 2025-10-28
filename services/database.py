@@ -90,9 +90,11 @@ def delete_user_text_in_word_or_grammer(
 ) -> None:
     connection = sqlite3.connect(db_path)  
     cursor = connection.cursor()
-    if table in ({WORDS_TABLE_NAME}, {GRAMMER_TABLE_NAME}):
+    if table in [WORDS_TABLE_NAME, GRAMMER_TABLE_NAME]:
         cursor.execute(f"DELETE FROM {table} WHERE user_text=?", (user_text,))
         connection.commit()
+    else:
+        logger.info("user_text_in_word_or_grammer received wrong table name.")
     cursor.close()
     
 def delete_question(question: str, db_path: str = DATA_BASE_PATH) -> None:

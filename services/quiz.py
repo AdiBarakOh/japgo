@@ -6,6 +6,7 @@ from typing import Optional
 
 from config import (
     ANSWER_SEPARATION,
+    DATA_BASE_PATH,
     GENERAL_REACTION_SECONDS,
     GRAMMER_TABLE_NAME,
     LONG_QUIZ_QUESTIONS,
@@ -42,6 +43,8 @@ class Quiz:
         self.client: discord.Client = client
         self.ai_quiz: list[str] | None = None
     
+    def clean_sql_data(data: str) -> str:
+        return str(data).strip("""('" ,)""")
         
     def calc_how_many_questions(self, reaction: str) -> int:
         question_number: int = 0
@@ -56,26 +59,26 @@ class Quiz:
         return question_number
     
     
-    def pull_dates_for_quiz(self) -> Optional[list[str]]:
+    def pull_dates_for_quiz(self, db_path: str = DATA_BASE_PATH) -> Optional[list[str]]:
         """
         Returns random dates on which information was learned
         """
-        words: list[str | None] = get_all_info_dates(WORDS_TABLE_NAME)
-        grammers: list[str | None] = get_all_info_dates(GRAMMER_TABLE_NAME)
+        words: list[str | None] = get_all_info_dates(WORDS_TABLE_NAME, db_path)
+        grammers: list[str | None] = get_all_info_dates(GRAMMER_TABLE_NAME, db_path)
         all_dates = words + grammers
         if len(all_dates) >= 1:
             dates_to_choose_count: int = min(len(all_dates), MAX_DATES_TO_QUIZ)
             random_dates_unclean: list[str] = random.choices(all_dates, k=dates_to_choose_count)
-            random_dates_cleaned: list[str] = [(str(day)).strip("""('" ,)""") for day in set(random_dates_unclean)]
+            random_dates_cleaned: list[str] = [(self.clean_sql_data(str(day))) for day in set(random_dates_unclean)]
             return random_dates_cleaned
         return None
     
     
-    def pull_info_for_quiz(self, dates: list[str]) -> list[str]:
+    def pull_info_for_quiz(self, dates: list[str], db_path: str = DATA_BASE_PATH) -> list[str]:
         info_for_test: list[str | None] = []
         for day in dates:
-            for info in get_info_by_date(day):
-                info_for_test.append(str(info).strip("""('" ,)"""))
+            for info in get_info_by_date(day, db_path):
+                info_for_test.append((self.clean_sql_data(str(info))))
         return info_for_test
     
        

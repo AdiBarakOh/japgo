@@ -32,7 +32,7 @@ def test_quiz_info_collecting(tmp_path):
     create_db(tmp_path)
     word = "test word"
     add_word_to_db(word, tmp_path)
-    assert (time.strftime('%Y-%m-%d')) in Quiz.pull_dates_for_quiz
+    assert (time.strftime('%Y-%m-%d')) in Quiz.pull_dates_for_quiz(Quiz, tmp_path)
     assert word in Quiz.pull_info_for_quiz(time.strftime('%Y-%m-%d'))
     
 

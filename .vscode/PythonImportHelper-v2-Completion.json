@@ -180,6 +180,14 @@
         "documentation": {}
     },
     {
+        "label": "DATA_BASE_PATH",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "GENERAL_REACTION_SECONDS",
         "importPath": "config",
         "description": "config",
@@ -460,6 +468,14 @@
         "documentation": {}
     },
     {
+        "label": "get_info_by_date",
+        "importPath": "services.database",
+        "description": "services.database",
+        "isExtraImport": true,
+        "detail": "services.database",
+        "documentation": {}
+    },
+    {
         "label": "pull_added_today",
         "importPath": "services.database",
         "description": "services.database",
@@ -555,6 +571,23 @@
         "description": "services.ai_responses",
         "isExtraImport": true,
         "detail": "services.ai_responses",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
         "documentation": {}
     },
     {
@@ -678,7 +711,7 @@
         "kind": 2,
         "importPath": "services.database",
         "description": "services.database",
-        "peekOfCode": "def delete_user_text_in_word_or_grammer(\n        table: str, user_text: str, db_path: str = DATA_BASE_PATH\n) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    if table in ({WORDS_TABLE_NAME}, {GRAMMER_TABLE_NAME}):\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    cursor.close()\ndef delete_question(question: str, db_path: str = DATA_BASE_PATH) -> None:",
+        "peekOfCode": "def delete_user_text_in_word_or_grammer(\n        table: str, user_text: str, db_path: str = DATA_BASE_PATH\n) -> None:\n    connection = sqlite3.connect(db_path)  \n    cursor = connection.cursor()\n    if table in [WORDS_TABLE_NAME, GRAMMER_TABLE_NAME]:\n        cursor.execute(f\"DELETE FROM {table} WHERE user_text=?\", (user_text,))\n        connection.commit()\n    else:\n        logger.info(\"user_text_in_word_or_grammer received wrong table name.\")",
         "detail": "services.database",
         "documentation": {}
     },
@@ -732,7 +765,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_create_db():\n    create_db(TEMP_DB_PATH)\n    assert os.path.exists(TEMP_DB_PATH)\ndef test_adding_word_to_db():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()",
+        "peekOfCode": "def test_create_db(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    assert os.path.exists(TEMP_DB_PATH)\ndef test_adding_word_to_db(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  ",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -741,7 +774,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_adding_word_to_db():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    delete_user_text_in_word_or_grammer('word', word, TEMP_DB_PATH)\n    assert added_result is not None",
+        "peekOfCode": "def test_adding_word_to_db(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    added_result = cursor.fetchone()\n    cursor.close()",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -750,7 +783,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_delete_user_text_in_word_or_grammer():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    delete_user_text_in_word_or_grammer(WORDS_TABLE_NAME, word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)\n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    result = cursor.fetchone()\n    cursor.close()\n    assert result is None",
+        "peekOfCode": "def test_delete_user_text_in_word_or_grammer(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    delete_user_text_in_word_or_grammer(WORDS_TABLE_NAME, word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)\n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) \n    result = cursor.fetchone()",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -759,7 +792,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_adding_grammer_to_db():\n    grammer = \"this is adding_grammer_to_db grammer\"\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {GRAMMER_TABLE_NAME} WHERE user_text=?\", (grammer,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    assert added_result is not None\ndef test_pull_info_for_quiz():",
+        "peekOfCode": "def test_adding_grammer_to_db(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    grammer = \"this is adding_grammer_to_db grammer\"\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {GRAMMER_TABLE_NAME} WHERE user_text=?\", (grammer,)) \n    added_result = cursor.fetchone()\n    cursor.close()",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -768,7 +801,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_pull_info_for_quiz():\n    grammer = \"this is pull_info_for_test word\"\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates=[time.strftime('%Y-%m-%d')])\n    assert grammer in info_to_test\ndef test_pull_added_today():\n    grammer = \"this is pull_added_today test\"\n    word = \"this is pull_added_today test\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    add_grammer_to_db(grammer, TEMP_DB_PATH)",
+        "peekOfCode": "def test_pull_info_for_quiz(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    grammer = \"this is pull_info_for_test word\"\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    dates = Quiz.pull_dates_for_quiz(Quiz, TEMP_DB_PATH)\n    info_to_test = Quiz.pull_info_for_quiz(Quiz, dates, TEMP_DB_PATH)\n    assert grammer in info_to_test\ndef test_pull_added_today(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -777,7 +810,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_pull_added_today():\n    grammer = \"this is pull_added_today test\"\n    word = \"this is pull_added_today test\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    grammers = pull_added_today(GRAMMER_TABLE_NAME, TEMP_DB_PATH)\n    words = pull_added_today(WORDS_TABLE_NAME, TEMP_DB_PATH)\n    assert word in words\n    assert grammer in grammers\ndef test_add_question_to_db():",
+        "peekOfCode": "def test_pull_added_today(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    grammer = \"this is pull_added_today test\"\n    word = \"this is pull_added_today test\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    add_grammer_to_db(grammer, TEMP_DB_PATH)\n    grammers = pull_added_today(GRAMMER_TABLE_NAME, TEMP_DB_PATH)\n    words = pull_added_today(WORDS_TABLE_NAME, TEMP_DB_PATH)\n    assert word in words",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -786,7 +819,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_add_question_to_db():\n    question = (\"this is a question?\")\n    add_question_to_db(question, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?\", (question,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    assert added_result is not None\ndef test_delete_question():",
+        "peekOfCode": "def test_add_question_to_db(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    question = (\"this is a question?\")\n    add_question_to_db(question, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?\", (question,)) \n    added_result = cursor.fetchone()\n    cursor.close()",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -795,7 +828,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_delete_question():\n    question = (\"this is a question?\")\n    add_question_to_db(question, TEMP_DB_PATH)\n    delete_question(question, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?\", (question,)) \n    added_result = cursor.fetchone()\n    cursor.close()\n    assert added_result is None",
+        "peekOfCode": "def test_delete_question(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    question = (\"this is a question?\")\n    add_question_to_db(question, TEMP_DB_PATH)\n    delete_question(question, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {QUESTIONS_TABLE_NAME} WHERE user_text=?\", (question,)) \n    added_result = cursor.fetchone()",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -804,16 +837,7 @@
         "kind": 2,
         "importPath": "tests.test_database",
         "description": "tests.test_database",
-        "peekOfCode": "def test_get_all_info_dates():\n    word = \"get_all_info_dates\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    dates = get_all_info_dates(WORDS_TABLE_NAME, TEMP_DB_PATH)\n    assert time.strftime('%Y-%m-%d') in dates",
-        "detail": "tests.test_database",
-        "documentation": {}
-    },
-    {
-        "label": "TEMP_DB_PATH",
-        "kind": 5,
-        "importPath": "tests.test_database",
-        "description": "tests.test_database",
-        "peekOfCode": "TEMP_DB_PATH = str(lambda tmp_path: tmp_path)\ndef test_create_db():\n    create_db(TEMP_DB_PATH)\n    assert os.path.exists(TEMP_DB_PATH)\ndef test_adding_word_to_db():\n    word = \"this is adding_word_to_db test word\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    connection = sqlite3.connect(TEMP_DB_PATH)  \n    cursor = connection.cursor()  \n    cursor.execute(f\"SELECT * FROM {WORDS_TABLE_NAME} WHERE user_text=?\", (word,)) ",
+        "peekOfCode": "def test_get_all_info_dates(tmp_path):\n    TEMP_DB_PATH = Path(str(tmp_path)) / \"test_db.sqlite\"\n    create_db(TEMP_DB_PATH)\n    word = \"get_all_info_dates\"\n    add_word_to_db(word, TEMP_DB_PATH)\n    dates = get_all_info_dates(WORDS_TABLE_NAME, TEMP_DB_PATH)\n    assert time.strftime('%Y-%m-%d') in dates",
         "detail": "tests.test_database",
         "documentation": {}
     },
@@ -840,7 +864,7 @@
         "kind": 2,
         "importPath": "tests.test_quiz",
         "description": "tests.test_quiz",
-        "peekOfCode": "def test_quiz_info_collecting(tmp_path):\n    create_db(tmp_path)\n    word = \"test word\"\n    add_word_to_db(word, tmp_path)\n    assert (time.strftime('%Y-%m-%d')) in Quiz.pull_dates_for_quiz\n    assert word in Quiz.pull_info_for_quiz(time.strftime('%Y-%m-%d'))",
+        "peekOfCode": "def test_quiz_info_collecting(tmp_path):\n    create_db(tmp_path)\n    word = \"test word\"\n    add_word_to_db(word, tmp_path)\n    assert (time.strftime('%Y-%m-%d')) in Quiz.pull_dates_for_quiz(Quiz, tmp_path)\n    assert word in Quiz.pull_info_for_quiz(time.strftime('%Y-%m-%d'))",
         "detail": "tests.test_quiz",
         "documentation": {}
     },
