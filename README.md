@@ -40,11 +40,13 @@ pip install -r requirements.txt
 ### 3. Configuration  
 Edit `config.py` (or use environment variables) with your keys and settings, and adjust to your Japanease server and channel names. 
 ```
-
 ### Run the Bot  
 ```bash
 python main.py
 ```
+
+- How it should look like:
+
 ![README PHOTO](https://github.com/user-attachments/assets/345e9a89-18c2-4957-8651-423d33f18993)
 
 
