@@ -729,7 +729,7 @@
         "kind": 6,
         "importPath": "services.quiz",
         "description": "services.quiz",
-        "peekOfCode": "class Quiz:\n    QUIZ_START_MESSAGE: str = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT: str = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"\n    )",
+        "peekOfCode": "class Quiz:\n    QUIZ_START_MESSAGE: str = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer.\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT: str = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"\n    )\n    def __init__(self, message: discord.Message, client: discord.Client):",
         "detail": "services.quiz",
         "documentation": {}
     },
@@ -738,7 +738,7 @@
         "kind": 5,
         "importPath": "services.quiz",
         "description": "services.quiz",
-        "peekOfCode": "logger = logging.getLogger('quiz')\nclass Quiz:\n    QUIZ_START_MESSAGE: str = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer and will be scored.\n            No backsies!\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT: str = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"",
+        "peekOfCode": "logger = logging.getLogger('quiz')\nclass Quiz:\n    QUIZ_START_MESSAGE: str = \"\"\"Do you want me to create a quiz for you?\n            React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.\n            After each question, every message you send WILL count as your answer.\n            Please answer carefully.\"\"\"   \n    NOT_ENOUGH_INPUT: str = (\n                    \"Not enough data to test, \" +\n                    \"try and add more words and grammer!\"\n    )",
         "detail": "services.quiz",
         "documentation": {}
     },

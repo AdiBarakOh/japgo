@@ -30,8 +30,7 @@ logger = logging.getLogger('quiz')
 class Quiz:
     QUIZ_START_MESSAGE: str = """Do you want me to create a quiz for you?
             React with 👍 for a short quiz, 😆 for medium, or 🙏 for a long one.
-            After each question, every message you send WILL count as your answer and will be scored.
-            No backsies!
+            After each question, every message you send WILL count as your answer.
             Please answer carefully."""   
     NOT_ENOUGH_INPUT: str = (
                     "Not enough data to test, " +
@@ -44,7 +43,7 @@ class Quiz:
         self.client: discord.Client = client
         self.ai_quiz: list[str] | None = None
     
-    def clean_sql_data(data: str) -> str:
+    def clean_sql_data(self, data: str) -> str:
         return str(data).strip("""('" ,)""")
         
     def calc_how_many_questions(self, reaction: str) -> int:

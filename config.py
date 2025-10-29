@@ -2,7 +2,6 @@ import discord
 import os
 import logging
 
-logging.basicConfig(filename='main_log', encoding='utf-8', level=logging.DEBUG)
 
 logger = logging.getLogger("config")
 
