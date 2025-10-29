@@ -1,4 +1,4 @@
-# 🇯🇵 Japgo: Japanese Instructor Discord Bot  
+# Japgo: Japanese Instructor Discord Bot 
 *A Discord bot that helps you learn Japanese: built in Python.*
 
 ---
@@ -16,17 +16,17 @@
 ## Structure: 
   - `main.py` - bot entry point  
   - `config.py` - configuration and tokens  
-  - `services/` - AI and business logic  
-  - `handlers/` - Discord event and command handlers  
-  - `tests/` - unit and integration tests  
+  - `services/` - AI and bot logic  
+  - `handlers/` - Discord events  
+  - `tests/` - tests  
 ---
 
 ## ⚙️ Setup  
 
 ### 1. Prerequisites  
 - Python 3.8+  
-- Discord Bot Token  
-- OpenAI API Key  
+- Discord Bot Token (free)  
+- OpenAI API Key (NOT free)
 
 ### 2. Installation  
 ```bash
@@ -40,16 +40,20 @@ pip install -r requirements.txt
 ### 3. Configuration  
 Edit `config.py` (or use environment variables) with your keys and settings, and adjust to your Japanease server and channel names. 
 ```
-
 ### Run the Bot  
 ```bash
 python main.py
 ```
 
+- How it should look like:
+
+![README PHOTO](https://github.com/user-attachments/assets/345e9a89-18c2-4957-8651-423d33f18993)
+
+
 ---
 
 ## License  
-Educational and non-commercial use only.  
+Non-commercial use only.  
 
 ---
 
