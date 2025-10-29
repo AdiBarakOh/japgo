@@ -45,6 +45,8 @@ Edit `config.py` (or use environment variables) with your keys and settings, and
 ```bash
 python main.py
 ```
+![README PHOTO](https://github.com/user-attachments/assets/345e9a89-18c2-4957-8651-423d33f18993)
+
 
 ---
 
